@@ -1,0 +1,38 @@
+{
+    "name": "venomous-buffalos-blog",
+    "version": "1.0.0",
+    "description": "Angular simple blog app.",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MilenaSh/Venomous-Buffalos-Blog.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MilenaSh/Venomous-Buffalos-Blog/issues"
+    },
+    "homepage": "https://github.com/MilenaSh/Venomous-Buffalos-Blog#readme",
+    "dependencies": {
+        "@types/bcryptjs": "^2.4.0",
+        "@types/body-parser": "^1.16.4",
+        "@types/cors": "^2.8.1",
+        "@types/express": "^4.0.36",
+        "@types/jsonwebtoken": "^7.2.3",
+        "@types/mongoose": "^4.7.20",
+        "@types/passport": "^0.3.3",
+        "@types/passport-jwt": "^2.0.22",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.17.2",
+        "cors": "^2.8.4",
+        "express": "^4.15.4",
+        "jsonwebtoken": "^7.4.3",
+        "mongoose": "^4.11.7",
+        "passport": "^0.4.0",
+        "passport-jwt": "^3.0.0"
+    }
+}
