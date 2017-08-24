@@ -35,6 +35,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
 
+// Passpot
+app.use(passport.initialize());
+app.use(passport.session());
+// to move up later
+// require('./config/passport')(passport);
+
 // every route coming from users will be looked for in this file.
 app.use('/users', users);
 
