@@ -4,7 +4,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 
-// Require de user schema
+// Require the user schema
 const User = require('../models/user');
 
 // Register 
@@ -65,9 +65,9 @@ router.post('/authenticate', (req, res, next) => {
     });
 });
 
-// Profile - protected routes
+// Profile - protected routes with the second parameter: passport.authenticate('jwt', { session: false }), 
 router.get('/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
-    res.send('PROFILE');
+    res.json({ user: req.user });
 });
 
 module.exports = router;
