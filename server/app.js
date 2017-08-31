@@ -29,8 +29,8 @@ const port = 3000;
 // cors enables us to run the app on 2 different ports
 app.use(cors());
 
-// Set statis folder where will be the client side
-app.use(express.static(path.join(__dirname, 'public')));
+// Set static folder where will be the client side
+app.use(express.static(path.join(__dirname, '../public')));
 
 
 app.use(bodyParser.json());
@@ -44,6 +44,10 @@ require('./config/passport')(passport);
 // every route coming from users will be looked for in this file.
 app.use('/users', users);
 
+// TO BE USED for same port - replacing app.get('/',
+// app.get('*', (req, res) => {
+//     res.sendfile('../public/index.html');
+// });
 
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
