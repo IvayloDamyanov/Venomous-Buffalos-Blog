@@ -1,3 +1,11 @@
-.login-register-form {
-    margin-top: 150px;
+#ajax-register-form {
+    max-width: 500px;
+    box-sizing: border-box;
+    padding-bottom: 10%;
+    margin: 5% auto;
+    text-align: center;
+}
+
+.register-header h1 {
+    font-size: 80px;
 }
