@@ -42,6 +42,7 @@ import { HomeComponent } from './components/home/home.component';
     AppRoutingModule,
     HttpModule,
     FormsModule,
+    SharedModule,
     // RouterModule.forRoot(appRoutes),
     AlertModule.forRoot(),
     FlashMessagesModule
