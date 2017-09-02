@@ -1,3 +1,4 @@
+import { AuthService } from './services/auth.service';
 import { ValidateService } from './services/validate.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -5,6 +6,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'ngx-flash-messages';
 import { AlertModule } from 'ngx-bootstrap';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -36,12 +38,13 @@ const appRoutes : Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
     AlertModule.forRoot(),
     FlashMessagesModule
   ],
-  providers: [ValidateService],
+  providers: [ValidateService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
