@@ -1,3 +1,4 @@
+
 import { AuthService } from './services/auth.service';
 import { ValidateService } from './services/validate.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,7 +15,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
-
+import { FooterComponent } from './static-element/footer/footer.component';
+import { AboutUsComponent } from './static-element/about-us/about-us.component';
 // wrong import import { NavbarComponent } from './components/src/app/components/navbar/navbar.component';
 
 // Here we add the routes - later to rewrite with lasy loading
@@ -24,6 +26,7 @@ const appRoutes : Routes = [
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'profile', component: ProfileComponent},
+  {path: 'aboutUs',component: AboutUsComponent}
   //{path: '**', component: NotFoundComponent},
 ]
 
@@ -34,7 +37,9 @@ const appRoutes : Routes = [
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    FooterComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
