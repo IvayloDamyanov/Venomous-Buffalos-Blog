@@ -14,7 +14,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 
 
@@ -34,7 +33,6 @@ import { HomeComponent } from './components/home/home.component';
     LoginComponent,
     ProfileComponent,
     AppComponent,
-    NavbarComponent,
     HomeComponent,
   ],
   imports: [
@@ -43,7 +41,6 @@ import { HomeComponent } from './components/home/home.component';
     HttpModule,
     FormsModule,
     SharedModule,
-    // RouterModule.forRoot(appRoutes),
     AlertModule.forRoot(),
     FlashMessagesModule
   ],
