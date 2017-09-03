@@ -1,3 +1,4 @@
+import { UnauthorizedComponent } from './shared/unauthorized/unauthorized.component'; // to be fixed with proper module loading
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -8,12 +9,14 @@ import { ProfileComponent } from './components/profile/profile.component';
 
 import { SharedModule } from './shared/shared.module';
 
+
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path:'register', component: RegisterComponent },
     { path:'login', component: LoginComponent },
     { path:'profile', component: ProfileComponent },
+    { path: '**', component: UnauthorizedComponent, pathMatch: 'full' }
     // {path: '**', component: NotFoundComponent}
 ];
 
