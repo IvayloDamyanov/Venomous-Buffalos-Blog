@@ -11,23 +11,14 @@
   #login-link:hover,
   #logout-link:hover,
   #register-link:hover,
-  #profile-link:hover,
-  #courses-nav:hover,
-  #chat-nav:hover,
-  #jumbotron-button:hover,
-  #details-button:hover,
-  #details-button-recent:hover,
-  #details-button-popular:hover {
-      color: #398CD2;
+  #home-link:hover {
       background-color: #CAD7D3;
   }
   
   #login-link,
   #logout-link,
   #register-link,
-  #profile-link,
-  #courses-nav,
-  #chat-nav {
-      color: #1F4838;
+  #home-link {
+      color: #FFFFFF !important;
       font-size: 17px;
   }
