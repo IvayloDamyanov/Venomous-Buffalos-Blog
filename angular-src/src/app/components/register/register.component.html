@@ -1,7 +1,7 @@
 <div class="text-center" id="register-text">
     <h1><b>Register</b></h1>
 </div>
-<form (submit)="onRegisterSubmit()" id="ajax-register-form" action="#" role="form" autocomplete="off">
+<form (ngSubmit)="onRegisterSubmit()" id="ajax-register-form" role="form" autocomplete="off">
     <div class="form-group">
         <input type="text" [(ngModel)]="name" name="name" id="name-register" tabindex="1" class="form-control" placeholder="Name" value="">
     </div>
@@ -20,7 +20,7 @@
     <div class="form-group">
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3">
-                <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
+                <button type="submit" name="register-submit" id="register-submit" class="form-control btn btn-info">Register Now</button>
             </div>
         </div>
     </div>
