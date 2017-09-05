@@ -49,7 +49,7 @@ export class AuthService {
 
   // check if the token has not expired
   loggedIn(){
-    return tokenNotExpired();
+    return tokenNotExpired('id_token');
   }
 
   logout(){
