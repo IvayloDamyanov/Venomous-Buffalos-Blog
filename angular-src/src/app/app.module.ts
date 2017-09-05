@@ -8,6 +8,7 @@ import { FlashMessagesModule } from 'ngx-flash-messages';
 import { AlertModule } from 'ngx-bootstrap';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthGuard } from './guards/auth.guard';
 
 
 import { SharedModule } from './shared/shared.module';
@@ -47,7 +48,7 @@ import { RegisterComponent } from './components/register/register.component';
     AlertModule.forRoot(),
     FlashMessagesModule
   ],
-  providers: [ValidateService, AuthService],
+  providers: [ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
