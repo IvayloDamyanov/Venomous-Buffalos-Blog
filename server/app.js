@@ -27,16 +27,16 @@ const users = require('./routes/users');
 const port = process.env.PORT || 3000;
 
 // cors enables us to run the app on 2 different ports
-// app.use(cors());
+app.use(cors());
 
 
-app.use(function(req, res, next) {
-    res.header('Access-Control-Allow-Credentials', true);
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT');
-    res.header('Access-Control-Allow-Headers', 'appid, X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
-    next();
-});
+// app.use(function(req, res, next) {
+//     res.header('Access-Control-Allow-Credentials', true);
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT');
+//     res.header('Access-Control-Allow-Headers', 'appid, X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
+//     next();
+// });
 
 // Set static folder where will be the client side
 app.use(express.static(path.join(__dirname, '../public')));

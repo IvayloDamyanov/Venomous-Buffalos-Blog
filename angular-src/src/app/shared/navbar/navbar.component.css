@@ -11,6 +11,8 @@
   #login-link:hover,
   #logout-link:hover,
   #register-link:hover,
+  #dashboard-link:hover,
+  #profile-link:hover,
   #home-link:hover {
       background-color: #CAD7D3;
   }
@@ -18,7 +20,8 @@
   #login-link,
   #logout-link,
   #register-link,
+  #dashboard-link,
+  #profile-link,
   #home-link {
-      color: #FFFFFF !important;
       font-size: 17px;
   }

@@ -1,6 +1,3 @@
-import { ProfileComponent } from './components/profile/profile.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
 import { AuthService } from './services/auth.service';
 import { ValidateService } from './services/validate.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,10 +10,13 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 
-
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 // Here we add the routes - later to rewrite with lasy loading
@@ -36,6 +36,7 @@ import { HomeComponent } from './components/home/home.component';
     ProfileComponent,
     AppComponent,
     HomeComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
