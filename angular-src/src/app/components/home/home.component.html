@@ -1,13 +1,50 @@
-<div class="jumbotron full">
-    <div class="container text-center">
-        <h2 id="main-slogan">Travel, experience & share</h2>
-        <form class="navbar-form navbar-left" role="search">
+<main>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-            <div class="col-md-8">
-                <input type="text" id="search-input-field" class="form-control" placeholder="Search place">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="../../../assets/imageOne.jpeg">
+                <div class="carousel-caption">
+                    <h3>PizzaHub</h3>
+                    <p>Enjoy your stay!</p>
+                </div>
             </div>
 
-            <button type="submit" id="search-btn" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
-        </form>
+            <div class="item">
+                <img src="../../../assets/imageTwo.jpeg">
+                <div class="carousel-caption">
+                    <h3>Never be botherd</h3>
+                    <p>Have some free time? Enjoy a conversation with our friendly staff!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../../../assets/imageThree.jpg">
+                <div class="carousel-caption">
+                    <h3>Interested?</h3>
+                    <p>Give us a shot!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-</div>
+
+    <h1>Some content</h1>
+
+</main>
