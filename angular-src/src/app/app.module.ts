@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './guards/auth.guard';
 
 
+
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,6 +19,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+
+import { SearchModule } from './search/search.module';
 
 
 // Here we add the routes - later to rewrite with lasy loading
@@ -46,7 +49,8 @@ import { RegisterComponent } from './components/register/register.component';
     FormsModule,
     SharedModule,
     AlertModule.forRoot(),
-    FlashMessagesModule
+    FlashMessagesModule,
+    SearchModule.forRoot(),
   ],
   providers: [ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
