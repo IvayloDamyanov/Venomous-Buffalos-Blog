@@ -1,6 +1,6 @@
 import { UnauthorizedComponent } from './shared/unauthorized/unauthorized.component'; // to be fixed with proper module loading
 import { HomeComponent } from './components/home/home.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -10,6 +10,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 
 import { SharedModule } from './shared/shared.module';
+
+import { ListComponent } from './search/list/list.component';
+import { SearchModule } from './search/search.module';
 
 
 const routes: Routes = [
@@ -32,7 +35,7 @@ const routes: Routes = [
 // ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), SearchModule.forRoot()],
   exports: [RouterModule]
 })
 
