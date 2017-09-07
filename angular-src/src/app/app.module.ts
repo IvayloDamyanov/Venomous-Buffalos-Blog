@@ -1,3 +1,4 @@
+import { PostModule } from './post/post.module';
 import { AuthService } from './services/auth.service';
 import { ValidateService } from './services/validate.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -43,6 +44,7 @@ import { SearchModule } from './search/search.module';
     DashboardComponent,
   ],
   imports: [
+    PostModule,
     BrowserModule,
     AppRoutingModule,
     HttpModule,
