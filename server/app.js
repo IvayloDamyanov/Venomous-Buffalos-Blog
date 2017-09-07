@@ -1,10 +1,18 @@
+// const express = require('express');
+// const path = require('path');
+// const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+// const cors = require('cors');
+// const passport = require('passport');
+// const mongoose = require('mongoose'); // maybe we use only mongodb later
+// const config = require('./config/database');
+
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const passport = require('passport');
-const mongoose = require('mongoose'); // maybe we use only mongodb later
+const mongoose = require('mongoose');
 const config = require('./config/database');
 
 //temporary setup with mongoose
@@ -44,14 +52,26 @@ app.use(function(req, res, next) {
 });
 
 // Passpot
+
+// Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
-// to move up later
-//require('./config/passport')(passport);
+require('./config/passport')(passport);
 
-// every route coming from users will be looked for in this file.
 app.use('/users', users);
+
+
+
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+// // to move up later
+// //require('./config/passport')(passport);
+
+// // every route coming from users will be looked for in this file.
+
+// app.use('/users', users);
 
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
