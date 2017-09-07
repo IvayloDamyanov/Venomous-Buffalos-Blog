@@ -24,6 +24,7 @@ mongoose.connection.on('error', (err) => {
 const app = express();
 
 const users = require('./routes/users');
+const posts = require('./routes/posts')
 
 const port = process.env.PORT || 3000;
 
@@ -52,6 +53,7 @@ require('./config/passport')(passport);
 
 // every route coming from users will be looked for in this file.
 app.use('/users', users);
+app.use('/posts', posts);
 
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
