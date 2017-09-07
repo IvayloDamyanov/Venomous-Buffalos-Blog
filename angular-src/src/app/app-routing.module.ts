@@ -1,3 +1,4 @@
+import { SinglePostComponent } from './post/single-post/single-post.component';
 import { UnauthorizedComponent } from './shared/unauthorized/unauthorized.component'; // to be fixed with proper module loading
 import { HomeComponent } from './components/home/home.component';
 import { NgModule, Component } from '@angular/core';
@@ -22,6 +23,9 @@ const routes: Routes = [
     { path:'login', component: LoginComponent },
     { path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
     { path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
+
+    // testing single Post view
+    { path: 'singlePost', component: SinglePostComponent },
     { path: '**', component: UnauthorizedComponent, pathMatch: 'full' }
     // {path: '**', component: NotFoundComponent}
 ];
