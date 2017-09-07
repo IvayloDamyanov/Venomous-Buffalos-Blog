@@ -20,7 +20,6 @@ mongoose.connection.on('error', (err) => {
     console.log(`Database error ${err}`);
 });
 
-
 const app = express();
 
 const users = require('./routes/users');
@@ -47,8 +46,9 @@ app.use(function(req, res, next) {
 // Passpot
 app.use(passport.initialize());
 app.use(passport.session());
+
 // to move up later
-require('./config/passport')(passport);
+//require('./config/passport')(passport);
 
 // every route coming from users will be looked for in this file.
 app.use('/users', users);

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
+require('../config/passport')(passport);
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 
@@ -46,6 +47,7 @@ router.post('/authenticate', (req, res, next) => {
                 const token = jwt.sign(user, config.secret, {
                     expiresIn: 604800 // a week
                 });
+                console.log(token);
 
                 res.json({
                     success: true,
@@ -56,7 +58,9 @@ router.post('/authenticate', (req, res, next) => {
                         username: user.username,
                         email: user.email
                     }
+
                 });
+                console.log(token);
             } else {
                 return res.json({ success: false, msg: 'Wrong password' });
             }
@@ -67,6 +71,7 @@ router.post('/authenticate', (req, res, next) => {
 
 // Profile - protected routes with the second parameter: passport.authenticate('jwt', { session: false }), 
 router.get('/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
+    //console.log(req);
     res.json({ user: req.user });
 });
 
