@@ -2,12 +2,45 @@ main {
     margin-top: -21px;
 }
 
+#myCarousel {
+    position: relative;
+}
+
+#my-search {
+    overflow: hidden;
+    width: 400px;
+    height: 2em;
+    border-radius: 5px;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: 1.3em;
+}
+
+.btn {
+    font-size: 1.2em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+div.form-group {
+    position: absolute;
+    z-index: 9999999;
+    top: 10%;
+    /* change to whatever you want */
+    left: 35%;
+    /* change to whatever you want */
+    right: auto;
+    /* change to whatever you want */
+    bottom: auto;
+    /* change to whatever you want */
+}
+
 #intro-content h1 {
     color: white;
 }
 
 img {
-    max-height: 400px;
+    max-height: 500px;
     width: 100%;
 }
 

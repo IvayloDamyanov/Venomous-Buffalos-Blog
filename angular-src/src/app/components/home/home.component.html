@@ -1,5 +1,14 @@
 <main>
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div class="form-group">
+            <form (submit)="onSearchSubmit([query.value])" id="ajax-login-form">
+                <!-- <div class="container-4"> -->
+                <input id="my-search" #query type="text" placeholder=" Search from our posts...">
+                <input type="submit" name="search-submit" id="search-submit" class="btn" value="Search">
+                <!-- </div> -->
+            </form>
+        </div>
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -8,7 +17,7 @@
         </ol>
 
         <!-- Wrapper for slides -->
-        <!-- <div class="carousel-inner">
+        <div class="carousel-inner">
             <div class="item active">
                 <img src="../../../assets/imageOne.jpeg">
                 <div class="carousel-caption">
@@ -32,8 +41,7 @@
                     <p>Give us a shot!</p>
                 </div>
             </div>
-        </div> -->
-
+        </div>
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
@@ -45,17 +53,13 @@
         </a>
     </div>
 
-    <h3>
-        <!-- <li id="search-input">
+
+
+    <!-- <li id="search-input">
             <input #query type="text">
             <a [routerLink]="['/search']" [queryParams]="{keyword: [query.value]}">Search</a>
         </li> -->
-        <form (submit)="onSearchSubmit([query.value])" id="ajax-login-form">
-            <div class="form-group">
-                <input #query type="text">
-                <input type="submit" name="search-submit" id="search-submit" class="btn" value="Search" >
-            </div>
-        </form>
-    </h3>
+
+
 
 </main>
