@@ -18,6 +18,10 @@
                 <li id="dashboard-link" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/dashboard']">Dashboard</a></li>
                 <li id="profile-link" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/profile']">Profile</a></li>
 
+                <li id="search-input">
+                    <input #query type="text">
+                    <button (click) = "findService.search(query.value)">Find</button>
+                </li>
                 <li id="search-link"><a [routerLink]="['/search']">Search</a></li>
                 <li id="login-link" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/login']">Login</a></li>
                 <li id="register-link" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/register']">Register</a></li>

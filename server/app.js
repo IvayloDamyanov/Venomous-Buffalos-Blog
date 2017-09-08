@@ -23,7 +23,8 @@ mongoose.connection.on('error', (err) => {
 const app = express();
 
 const users = require('./routes/users');
-const posts = require('./routes/posts')
+const posts = require('./routes/posts');
+const searches = require('./routes/searches');
 
 const port = process.env.PORT || 3000;
 
@@ -54,6 +55,7 @@ require('./config/passport')(passport);
 
 app.use('/users', users);
 app.use('/posts', posts);
+app.use('/search', searches)
 
 // // every route coming from users will be looked for in this file.
 
