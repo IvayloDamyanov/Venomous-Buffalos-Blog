@@ -7,3 +7,7 @@ body {
         padding-top: 56px;
     }
 }
+
+#my-post {
+    max-width: 100%;
+}
