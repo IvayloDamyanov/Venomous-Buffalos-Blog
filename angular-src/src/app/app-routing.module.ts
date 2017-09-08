@@ -12,7 +12,6 @@ import { AuthGuard } from './guards/auth.guard';
 
 import { SharedModule } from './shared/shared.module';
 
-import { ListComponent } from './search/list/list.component';
 import { SearchModule } from './search/search.module';
 
 

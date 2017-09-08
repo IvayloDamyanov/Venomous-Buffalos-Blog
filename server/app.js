@@ -1,10 +1,10 @@
+const cookieParser = require('cookie-parser');
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const passport = require('passport');
-const mongoose = require('mongoose'); // maybe we use only mongodb later
+const mongoose = require('mongoose');
 const config = require('./config/database');
 
 //temporary setup with mongoose
@@ -20,10 +20,11 @@ mongoose.connection.on('error', (err) => {
     console.log(`Database error ${err}`);
 });
 
-
 const app = express();
 
 const users = require('./routes/users');
+const posts = require('./routes/posts');
+const searches = require('./routes/searches');
 
 const port = process.env.PORT || 3000;
 
@@ -45,15 +46,23 @@ app.use(function(req, res, next) {
 });
 
 // Passpot
+
+// Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
-// to move up later
+
 require('./config/passport')(passport);
 
-// every route coming from users will be looked for in this file.
 app.use('/users', users);
+app.use('/posts', posts);
+app.use('/search', searches)
+
+// // every route coming from users will be looked for in this file.
+
+// app.use('/users', users);
 
 app.get('/', (req, res) => {
+    console.log("3000 root");
     res.send('Invalid Endpoint');
 });
 
