@@ -1,10 +1,43 @@
-<div *ngIf="user">
-    <h2 class="page-header">{{user.name}}</h2>
-    <ul class="list-group">
-        <li class="list-group-item">Username: {{user.username}}</li>
-        <li class="list-group-item">Email: {{user.email}}</li>
-    </ul>
-</div>
+<div class="row">
+    <!--<div style="padding-top:50px;"> </div>-->
+    <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="media">
+                    <div align="center">
+                        <img class="thumbnail img-responsive" src="{{profilePicture}}" width="300px" height="300px">
+                        <img class="thumbnail img-responsive" src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" width="300px" height="300px">
+                    </div>
+                    <div class="media-body">
+                        <hr>
+                        <h3><strong>{{user.username}}</strong></h3>
+                        <hr>
+                        <h3><strong>Location</strong></h3>
+                        <p>
+                            <div contenteditable="true">
+                                <p>Not Specified.</p>
+                            </div>
+                        </p>
+                        <hr>
+                        <h3><strong>Gender</strong></h3>
+                        <p>
+                            <div contenteditable="true">
+                            </div>
+                        </p>
+                        <hr>
+                        <h3><strong>Birthday</strong></h3>
+                        <p>
+                            <div contenteditable="true">
+                                {{#if birthday}}
+                                <p>{{birthday}}</p>
+                                {{else}}
+                                <p>Not Specified.</p>
 
-<h1> Profile </h1>
-<!-- <h2 class="page-header">{{user.name}}</h2> -->
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
