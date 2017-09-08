@@ -6,6 +6,9 @@
   #my-navbar {
       color: #FFFFFF;
       background-color: #1F4547;
+      /* position: absolute;
+      width: 100%;
+      overflow: hidden; */
   }
   
   #login-link:hover,
