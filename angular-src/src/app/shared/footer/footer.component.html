@@ -1,34 +1,41 @@
 <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 <!--footer start from here-->
-<footer id="my-footer">
+<footer id="my-footer" class="" navbar-fixed-bottom>
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-6 footerleft ">
                 <div class="logofooter">
                     <img src="../../../assets/logo-blog.png" id="logo" alt="" class="img-responsive">
                 </div>
-                <p>We help you share your travelling experiences and to gai such from other nomads.</p>
-                <p><i class="fa fa-envelope"></i> E-mail : info@nomadsblog.com</p>
+
+
 
             </div>
             <div class="col-md-4 col-sm-6 paddingtop-bottom">
                 <h6 class="heading7">GENERAL LINKS</h6>
                 <ul class="footer-ul">
                     <li><a href="#"> Career</a></li>
-                    <li><a href="#"> Frequently Ask Questions</a></li>
+                    <li><a [routerLink]="['/contact/FAQ']"> Frequently Ask Questions</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-6 paddingtop-bottom">
+                <h6 class="heading7">GENERAL LINKS</h6>
+                <ul class="footer-ul">
+                    <li><a [routerLink]="['/contact/contactUs']">Contact Us</a></li>
+                    <li><a [routerLink]="['/contact/aboutUs']">About Us</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="copyright">
-        <div class="container">
-            <div class="col-md-6">
-                <p>© 2016 - All Rights with Nomad's blog</p>
+        <div class="container ">
+            <div class="col-md-12  ">
+                <p well well-sm>© 2016 - All Rights with Nomad's blog</p>
             </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <ul class="bottom_ul">
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 </footer>

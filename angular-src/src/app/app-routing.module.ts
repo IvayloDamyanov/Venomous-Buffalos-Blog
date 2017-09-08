@@ -22,7 +22,8 @@ const routes: Routes = [
     { path:'login', component: LoginComponent },
     { path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
     { path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-
+    // contact module test
+   {path:'contact', loadChildren:'./contact/contact.module#ContactModule'},
     // testing single Post view
     { path: 'singlePost', component: SinglePostComponent },
     { path: '**', component: UnauthorizedComponent, pathMatch: 'full' }
