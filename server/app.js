@@ -62,6 +62,7 @@ app.use('/search', searches)
 // app.use('/users', users);
 
 app.get('/', (req, res) => {
+    console.log("3000 root");
     res.send('Invalid Endpoint');
 });
 

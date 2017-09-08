@@ -8,15 +8,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  query: String;
+  query: String = "testQuery";
 
   constructor(private router: Router, private findService: FindService) { }
 
   ngOnInit() {
+    this.findService.search(this.query).subscribe(data => {
+      if (data.success){
+        console.log("list component search success " + data);
+      } else {
+        console.log("list component search fail " + data);
+      }
+    });
   }
 
   onSearch(){
-    this.findService.search(this.query);
+    this.findService.search(this.query).subscribe(data => {
+      if (data.success){
+        console.log("list component search success");
+      } else {
+        console.log("list component search fail");
+      }
+    });
+
   }
 
 }

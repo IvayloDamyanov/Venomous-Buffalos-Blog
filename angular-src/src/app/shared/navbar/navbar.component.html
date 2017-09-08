@@ -12,17 +12,19 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left test">
                 <li id="home-link" class="test" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a class="test" [routerLink]="['/']">Home</a></li>
+                <li id="search-input">
+                    <input #query type="text">
+                </li>
+                <li>
+                    <a [routerLink]="['/search']" [queryParams]="{ keyword: [query.value] }">Search</a>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <li id="dashboard-link" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/dashboard']">Dashboard</a></li>
                 <li id="profile-link" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/profile']">Profile</a></li>
 
-                <li id="search-input">
-                    <input #query type="text">
-                    <button (click) = "findService.search(query.value)">Find</button>
-                </li>
-                <li id="search-link"><a [routerLink]="['/search']">Search</a></li>
+                <!-- <li id="search-link"><a [routerLink]="['/search']">Search</a></li> -->
                 <li id="login-link" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/login']">Login</a></li>
                 <li id="register-link" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/register']">Register</a></li>
                 <li id="logout-link" *ngIf="authService.loggedIn()"><a (click)="onLogoutClick()" href="#">Logout</a></li>
