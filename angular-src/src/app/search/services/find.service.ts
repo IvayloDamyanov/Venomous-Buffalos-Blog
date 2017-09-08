@@ -11,13 +11,11 @@ export class FindService {
   constructor(private http:Http) { }
 
   search(query : String){
-    console.log("Find service: " + query);
-
     let headers = new Headers();
     this.loadToken(); // we grab the token from local storage
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/search', {headers: headers})
+    return this.http.get('http://localhost:3000/search', {headers: headers, search: query })
       .map(res => res.json());
   }
 

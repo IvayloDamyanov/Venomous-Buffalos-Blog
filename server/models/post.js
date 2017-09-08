@@ -29,6 +29,19 @@ const PostSchema = mongoose.Schema({
 
 const Post = module.exports = mongoose.model('Post', PostSchema);
 
-module.exports.getPostByName = function(id, callback) {
-    Post.findByName(name, callback);
+module.exports.addPost = function(newPost, callback) {
+    newPost.save(callback);
+}
+
+module.exports.getPostsByOwnerUsername = function(query, callback) {
+    var regex = new RegExp('^.*' + query + '.*$');
+    
+    Post.find({ownerUsername: regex}, callback);
+    // return Post.find({name: regex})
+    //     .exec(function (err, post) {
+    //         if (err){
+    //             console.log("Query error");
+    //         }
+    //         return post;
+    //     });
 }

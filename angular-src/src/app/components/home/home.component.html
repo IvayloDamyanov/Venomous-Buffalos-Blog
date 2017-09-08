@@ -8,7 +8,7 @@
         </ol>
 
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
+        <!-- <div class="carousel-inner">
             <div class="item active">
                 <img src="../../../assets/imageOne.jpeg">
                 <div class="carousel-caption">
@@ -32,7 +32,7 @@
                     <p>Give us a shot!</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -45,6 +45,17 @@
         </a>
     </div>
 
-    <h1>Some content</h1>
+    <h3>
+        <!-- <li id="search-input">
+            <input #query type="text">
+            <a [routerLink]="['/search']" [queryParams]="{keyword: [query.value]}">Search</a>
+        </li> -->
+        <form (submit)="onSearchSubmit([query.value])" id="ajax-login-form">
+            <div class="form-group">
+                <input #query type="text">
+                <input type="submit" name="search-submit" id="search-submit" class="btn" value="Search" >
+            </div>
+        </form>
+    </h3>
 
 </main>

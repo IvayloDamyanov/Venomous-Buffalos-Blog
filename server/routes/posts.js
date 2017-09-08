@@ -8,17 +8,21 @@ const config = require('../config/database');
 const Post = require('../models/post');
 
 // CreatePost 
-router.post('/posts/newpost', (req, res, next) => {
+router.post('/newpost', (req, res, next) => {
     let newPost = new Post({
-        ownerUsername: req.body.ownerUsername,
-        name: req.body.name,
-        img: req.body.img,
-        text: req.body.text,
-        dateCreated: req.body.dateCreated,
-        dateEdited: req.body.dateEdited
+        ownerUsername: "gosho",
+        name: "goshus",
+        text: "lorem ipsum dyra byra"
+        // ownerUsername: req.body.ownerUsername,
+        // name: req.body.name,
+        // img: req.body.img,
+        // text: req.body.text,
+        // dateCreated: req.body.dateCreated,
+        // dateEdited: req.body.dateEdited
     });
 
     Post.addPost(newPost, (err, post) => {
+        console.log("adding post");
         if (err) {
             res.json({ success: false, msg: 'Failed to add post' });
         } else {

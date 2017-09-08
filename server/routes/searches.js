@@ -3,11 +3,18 @@ const router = express.Router();
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
+const Post = require('../models/post');
 
 // Search
 router.get('/', (req, res, next) => {
-    console.log("server search get " + req.body);
-    res.send("Server Search get");
+    const query = req.query['0'];
+    
+    Post.getPostsByOwnerUsername(query, (err, data) => {
+        res.json({
+            success: true,
+            results: data
+        });
+    });
 });
 
 router.post('/', (req, res, next) => {
