@@ -53,6 +53,44 @@
         </a>
     </div>
 
+    <div class="col-lg-3 col-md-3 col-sm-9 col-xs-9">
+        <h1>All Posts By {{ user.username }}</h1>
+        <hr> Simple post content example.
+        <div id="my-post" class="container" *ngFor="let post of posts">
+            <div class="well">
+                <div class="media">
+                    <a class="pull-left">
+                        <img id="post-image" class="media-object" src={{post.pic}}>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{post.title}}</h4>
+                        <p class="text-right">By {{post.user}}</p>
+                        <p>{{post.text}}</p>
+                        <ul class="list-inline list-unstyled">
+                            <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+                            <li>|</li>
+                            <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+                            <li>|</li>
+                            <li>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                            </li>
+                            <li>|</li>
+                            <li>
+                                <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                                <span><i class="fa fa-facebook-square"></i></span>
+                                <span><i class="fa fa-twitter-square"></i></span>
+                                <span><i class="fa fa-google-plus-square"></i></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- <li id="search-input">

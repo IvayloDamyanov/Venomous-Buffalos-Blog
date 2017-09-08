@@ -5,12 +5,11 @@ html {
     min-height: 100%;
 }
 
-
-/* body {
+body {
     margin: 0 0 100px;
-    /* bottom = footer height 
-    padding: 25px;
-} */
+    margin-bottom: 150px;
+    clear: both;
+}
 
 footer {
     position: absolute;

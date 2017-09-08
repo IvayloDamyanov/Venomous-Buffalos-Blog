@@ -44,6 +44,10 @@ img {
     width: 100%;
 }
 
+#post-image {
+    width: 50px;
+}
+
 
 /* main {
     margin-bottom: 150px;
