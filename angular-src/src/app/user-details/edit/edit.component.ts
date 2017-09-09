@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+user: Object;
+username : String;
 name: String;
 email: String;
 description: String;
@@ -22,10 +24,44 @@ location: String;
               private router: Router) { }
 
   ngOnInit() {
+    // we get the currently logged user
+  //     this.authService.getProfile().subscribe( profile => {
+  //     this.user = profile.user;
+  //     return this.user;
+  //   },
+  // err => {
+  //   console.log(err);
+  //   return false;
+  // });
   }
 
   onEditSubmit() {
-    
+    // console.log(this.user);
+
+    const user = {
+      username: this.username,
+      name: this.name,
+      email: this.email,
+      description: this.description,
+      location: this.location   
+    }
+
+    console.log(user);
+
+    // this.authService.getProfile().subscribe(data => {
+    //   console.log(data);
+    // })
+
+    // this.authService.editUser(this.username).subscribe( data => {
+    //   if(data.success) {
+    //   this.flashMessage.show('You Filled in your profile successfully!', {classes: ['alert' ,'alert-success'], timeout: 3000});
+    //   this.router.navigate(['/profile'])
+    // } else {
+    //   this.flashMessage.show('An error has occured. PLease try again!', {classes: ['alert' ,'alert-danger'], timeout: 3000});
+    //   this.router.navigate(['/edit'])
+    // }
+    // })
+
   }
 
 }

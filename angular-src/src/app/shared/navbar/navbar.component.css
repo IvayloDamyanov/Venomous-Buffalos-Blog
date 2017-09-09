@@ -4,6 +4,12 @@
   }
   
   #my-navbar {
+      /* position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+    height: 70px; */
+      width: 100%;
       color: #FFFFFF;
       background-color: #1F4547;
       /* position: absolute;
