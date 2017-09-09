@@ -8,6 +8,7 @@ html {
 body {
     margin: 0 0 100px;
     margin-bottom: 150px;
+    min-height: 100%;
     clear: both;
 }
 
