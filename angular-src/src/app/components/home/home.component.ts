@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
+    // private localStorage: LocalStorage,
     private findService : FindService,
     private router: Router) { }
 
@@ -41,27 +42,13 @@ export class HomeComponent implements OnInit {
 
     this.findService.search(query).subscribe(data => {
       if (data.success) {
-        // console.log("Data success" + JSON.stringify({ data: data}, null, 4));
-        localStorage.add('searchResults', data);
+        // console.log(JSON.stringify({ data: data.results}, null, 4));
+        
+        localStorage.setItem('postsSearchResults', JSON.stringify(data.results));
         this.router.navigate(['search']);
       } else {
         console.log("Find service failed");
       }
-    })
-
-    // this.authService.authenticateUser(user).subscribe(data => {
-    //   if(data.success) {
-    //     this.authService.storeUserData(data.token, data.user);
-    //     this.flashMessage.show( 'You are now logged in', 
-    //     {classes: ['alert', 'alert-success'], timeout: 3000});
-    //     this.router.navigate(['dashboard']);
-    //   } else {
-    //     this.flashMessage.show(data.msg,
-    //       {classes: ['alert' ,'alert-danger'], timeout: 3000});
-    //     this.router.navigate(['login']);
-    //   }
-    // });
-
-         
+    });
   }
 }
