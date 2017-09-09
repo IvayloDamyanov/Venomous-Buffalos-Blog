@@ -131,3 +131,17 @@ footerleft p i {
     color: #FFF;
     font-size: 12px;
 }
+
+@media screen and (max-width:480px) {
+    img,
+    .heading7,
+    .copyright {
+        display: none;
+    }
+}
+
+@media screen and (max-width:700px) {
+    img {
+        display: none;
+    }
+}

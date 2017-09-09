@@ -1,3 +1,4 @@
+import { TextBolderPipe } from './faq/text-bolding.pipe';
 import { FormsModule } from '@angular/forms';
 import { ContactRoutingModule } from './contact-routing.module';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,6 @@ import { FaqComponent } from './faq/faq.component';
   imports: [
     CommonModule, ContactRoutingModule,FormsModule
   ],
-  declarations: [ContactUsComponent, AboutUsComponent, FaqComponent]
+  declarations: [ContactUsComponent, AboutUsComponent, FaqComponent,TextBolderPipe]
 })
 export class ContactModule { }
