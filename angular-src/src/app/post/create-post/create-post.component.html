@@ -1,0 +1,25 @@
+<h1>Create Post</h1>
+<hr>
+<div class="col-md-6">
+  <form [formGroup]="postForm" (ngSubmit)="savePost(postForm.value)" autocomplete="off">
+    <div class="form-group" [ngClass]="{'error': name.invalid && name.dirty }">
+      <label for="postName">Post Name:</label>
+      <em *ngIf="name.invalid && name.dirty">Required</em>
+      <input [(ngModel)]="post.name" formControlName="name" id="name" type="text" class="form-control" placeholder="Name of your post..." />
+    </div>
+    <div class="form-group" [ngClass]="{'error': img.invalid && img.dirty }">
+      <label for="img">Post Image URL:</label>
+      <em *ngIf="name.invalid && name.dirty">Required</em>
+      <input [(ngModel)]="post.img" formControlName="img" id="img" type="text" class="form-control" placeholder="Image URL of your post" />
+    </div>
+    <div class="form-group" [ngClass]="{'error': text.invalid && text.dirty }">
+      <label for="text">Text:</label>
+      <em *ngIf="text.invalid && text.dirty && text?.errors.required">Required</em>
+      <em *ngIf="text.invalid && text.dirty && text?.errors.maxLength">Cannot exceed 500 characters</em>
+      <em *ngIf="text.invalid && text.dirty && text?.errors.restrictedWords">Restricted words found: {{text.errors.restrictedWords}}</em>
+      <textarea formControlName="text" id="text" rows=5 class="form-control" placeholder="Text..."></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" [disabled]="postForm.invalid" class="btn btn-default" (click)="cancel()">Cancel</button>
+  </form>
+</div>
