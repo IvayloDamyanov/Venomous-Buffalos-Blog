@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 
 // Require the post schema
+const User = require('../models/user');
 const Post = require('../models/post');
 
 // CreatePost 
