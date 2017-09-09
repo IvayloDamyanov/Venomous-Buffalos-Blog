@@ -10,6 +10,7 @@ import { AlertModule } from 'ngx-bootstrap';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './guards/auth.guard';
+import { UserDetailsModule } from './user-details/user-details.module';
 
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
@@ -42,6 +43,7 @@ import { SearchModule } from './search/search.module';
     DashboardComponent,
   ],
   imports: [
+    UserDetailsModule,
     PostModule,
     BrowserModule,
     AppRoutingModule,

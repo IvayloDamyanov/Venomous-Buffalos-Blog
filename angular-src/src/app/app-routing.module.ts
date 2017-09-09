@@ -27,17 +27,11 @@ const routes: Routes = [
     { path:'post', loadChildren:'./post/post.module#PostModule'},
     // testing single Post view
     // { path: 'singlePost', component: SinglePostComponent },
+    { path: 'user', loadChildren: './user-details/user-details.module#UserDetailsModule'},
     { path: '**', component: UnauthorizedComponent, pathMatch: 'full' }
     // {path: '**', component: NotFoundComponent}
 ];
 
-// const appRoutes : Routes = [
-//   {path:'', component: HomeComponent},
-//   {path:'register', component: RegisterComponent},
-//   {path:'login', component: LoginComponent},
-//   {path:'profile', component: ProfileComponent},
-//   //{path: '**', component: NotFoundComponent},
-// ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes), SearchModule.forRoot()],

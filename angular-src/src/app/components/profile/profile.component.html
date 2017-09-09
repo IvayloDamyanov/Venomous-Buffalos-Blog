@@ -9,6 +9,8 @@
                         </div>
                         <div class="media-body">
                             <hr>
+                            <input [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" type="button" class="btn btn-primary" [routerLink]="['/edit']" value="Edit Profile Information">
+                            <hr>
                             <h1>{{ user.username }}</h1>
                             <hr>
                             <h4><strong>What kind of traveller are you?</strong></h4>
