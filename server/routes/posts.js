@@ -34,7 +34,7 @@ router.post('/newpost', (req, res) => {
             res.json({ success: false, message: 'Post creator is required.' });
         }
 
-        const post = new Post({
+        post = new Post({
             ownerName: req.body.ownerName,
             name: req.body.name,
             img: req.body.img,
