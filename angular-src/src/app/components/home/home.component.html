@@ -50,7 +50,7 @@
             <input #query type="text">
             <a [routerLink]="['/search']" [queryParams]="{keyword: [query.value]}">Search</a>
         </li> -->
-        <form (submit)="onSearchSubmit([query.value])" id="ajax-login-form">
+        <form (submit)="onSearchSubmit([query.value])" id="ajax-search-form">
             <div class="form-group">
                 <input #query type="text">
                 <input type="submit" name="search-submit" id="search-submit" class="btn" value="Search" >

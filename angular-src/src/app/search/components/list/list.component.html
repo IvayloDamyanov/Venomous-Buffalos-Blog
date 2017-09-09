@@ -1,3 +1,7 @@
-<p>
-  list works!
-</p>
+<div class="post-container" *ngFor="let result of resultsArray">
+    <h2 id="post-name">{{result.name}}</h2>
+    <h4 id="post-owner-name">{{result.ownerUsername}}</h4>
+    <h5 id="post-text">{{result.text}}</h5>
+    <div class="post-date">Post created: {{result.dateCreated}}</div>
+    <div class="post-date">Last Editted: {{result.dateModified}}</div>
+</div>

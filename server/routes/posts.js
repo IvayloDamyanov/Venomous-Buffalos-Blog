@@ -11,7 +11,7 @@ const Post = require('../models/post');
 router.post('/newpost', (req, res, next) => {
     let newPost = new Post({
         ownerUsername: "gosho",
-        name: "goshus",
+        name: "New post",
         text: "lorem ipsum dyra byra"
         // ownerUsername: req.body.ownerUsername,
         // name: req.body.name,
