@@ -15,7 +15,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li id="dashboard-link" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+                <li id="dashboard-link" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/newpost']">Create Post</a></li>
                 <li id="profile-link" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/profile']">Profile</a></li>
 
                 <!-- <li id="search-link"><a [routerLink]="['/search']">Search</a></li> -->

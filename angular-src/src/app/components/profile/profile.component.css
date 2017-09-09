@@ -11,3 +11,19 @@ body {
 #my-post {
     max-width: 100%;
 }
+
+#post-button {
+    background-color: #009D88;
+    color: #E7E7E7;
+    margin-left: 30%;
+    width: 20%;
+    font-size: 1.5em;
+}
+
+#post-button:hover {
+    background-color: #1F4547;
+    color: #E7E7E7;
+    margin-left: 30%;
+    width: 20%;
+    font-size: 1.5em;
+}
