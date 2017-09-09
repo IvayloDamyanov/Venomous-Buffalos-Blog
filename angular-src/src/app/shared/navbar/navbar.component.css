@@ -20,11 +20,21 @@
       background-color: #CAD7D3;
   }
   
-  #login-link,
-  #logout-link,
-  #register-link,
-  #dashboard-link,
-  #profile-link,
-  #home-link {
+  #login-link a:active,
+  #logout-link:hover,
+  #register-link:hover,
+  #dashboard-link:hover,
+  #profile-link:hover,
+  #home-link:hover {
+      color: black;
+  }
+  
+  #login-link a,
+  #logout-link a,
+  #register-link a,
+  #dashboard-link a,
+  #profile-link a,
+  #home-link a {
       font-size: 17px;
+      color: white;
   }

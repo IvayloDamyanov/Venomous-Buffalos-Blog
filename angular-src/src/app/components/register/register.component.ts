@@ -37,17 +37,16 @@ export class RegisterComponent implements OnInit {
 
   // Apply the validations
 
-  // // Validate Email
-  // if(!this.validateService.validateEmail(user.email)) {
-  //   this.flashMessage.show('Please enter a valid email', {classes: ['alert','alert-danger'], timeout: 3000})
-  //   return false;
-  // }
-
-  // // Required fields
-  //   if(!this.validateService.validateRegister(user)) {
-  //   this.flashMessage.show('Please fill in all fields', {classes: ['alert', 'alert-danger'], timeout: 3000})
-  //   return false;
-  // }
+      // Validate Email
+  if(!this.validateService.validateEmail(user.email)) {
+    this.flashMessage.show('Please enter a valid email', {classes: ['alert','alert-danger'], timeout: 3000})
+    return false;
+  }
+  // Required fields
+    if(!this.validateService.validateRegister(user)) {
+    this.flashMessage.show('Please fill in all fields', {classes: ['alert', 'alert-danger'], timeout: 3000})
+    return false;
+  }
 
   // Register user
   this.authService.registerUser(user).subscribe(data => {
