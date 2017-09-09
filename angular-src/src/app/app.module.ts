@@ -1,5 +1,6 @@
 import { PostModule } from './post/post.module';
 import { AuthService } from './services/auth.service';
+import { PostsService } from './services/posts.service';
 import { ValidateService } from './services/validate.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -52,7 +53,7 @@ import { SearchModule } from './search/search.module';
     FlashMessagesModule,
     SearchModule.forRoot(),
   ],
-  providers: [ValidateService, AuthService, AuthGuard],
+  providers: [ValidateService, AuthService, AuthGuard, PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
