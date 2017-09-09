@@ -8,15 +8,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  resultsArray : Array<Object>;
 
-  constructor(private router: Router, private findService: FindService) { }
+  constructor(
+    private router: Router, 
+    private findService: FindService) { }
 
   ngOnInit() {
+    this.resultsArray = JSON.parse(localStorage.getItem('postsSearchResults'));
+    // console.log(this.resultsArray[0]);
     
   }
 
   onSearch(){
     
   }
+
+  
 
 }
