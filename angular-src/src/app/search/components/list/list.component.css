@@ -1,0 +1,37 @@
+.background{
+    width: 100%;
+}
+
+.post-container{
+    background: rgba(0,67,71,0.2);
+    border-radius: 10px;
+    margin-bottom: 2%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    padding: 2%;
+}
+
+.image-container{
+    border-radius: 10px;
+    max-height: 35rem;
+    overflow: hidden;
+}
+
+.image{
+    width: 100%;
+}
+
+.field{
+    text-align: left;
+    margin-bottom: 1%;
+}
+
+.name-date{
+    text-align: left;
+}
+
+.sngl-field{
+    display: inline-block;
+}

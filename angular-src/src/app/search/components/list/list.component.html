@@ -1,7 +1,14 @@
-<div class="post-container" *ngFor="let result of resultsArray">
-    <h2 id="post-name">{{result.name}}</h2>
-    <h4 id="post-owner-name">{{result.ownerUsername}}</h4>
-    <h5 id="post-text">{{result.text}}</h5>
-    <div class="post-date">Post created: {{result.dateCreated}}</div>
-    <div class="post-date">Last Editted: {{result.dateModified}}</div>
+<div class = "background">
+    <div class="post-container" *ngFor="let result of resultsArray">
+        <div class = "image-container">
+            <img class = "image" src="{{this.imgParser(result.img)}}" alt="">
+        </div>
+        <h3 class="post-name field">{{result.name}}</h3>
+        <div class = "name-date field">
+            <h5 class="sngl-field" id="post-owner-name">{{result.ownerUsername}}, </h5>
+            <h5 class="sngl-field">{{this.dateParser(result.dateCreated)}}</h5>
+        </div>
+        <p class="text field" id="post-text">{{result.text}}</p>
+        <h6 class="post-date field">Last Editted: {{this.dateParser(result.dateModified)}}</h6>
+    </div>
 </div>

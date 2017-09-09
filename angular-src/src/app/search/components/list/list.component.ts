@@ -20,10 +20,25 @@ export class ListComponent implements OnInit {
     
   }
 
-  onSearch(){
-    
+  dateParser(input: String){
+    let output: String;
+    if(input && input.length > 10){
+      output = input.slice(0, 10);
+    } else {
+      output = input;
+    }
+    return output;
   }
 
+  imgParser(input: String){
+    let output: String;
+    if (input){
+      output = input;
+    } else {
+      output = "https://image.slidesharecdn.com/budgettravellingrevb-150910113232-lva1-app6892/95/budget-travelling-7-638.jpg?cb=1441959126";
+    }
+    return output;
+  }
   
 
 }
