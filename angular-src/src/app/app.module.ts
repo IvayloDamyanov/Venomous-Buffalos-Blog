@@ -12,7 +12,6 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './guards/auth.guard';
 import { UserDetailsModule } from './user-details/user-details.module';
-
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -22,6 +21,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { SearchModule } from './search/search.module';
+
 
 
 // Here we add the routes - later to rewrite with lasy loading

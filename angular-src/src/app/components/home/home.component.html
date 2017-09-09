@@ -21,7 +21,7 @@
             <div class="item active">
                 <img src="../../../assets/imageOne.jpeg">
                 <div class="carousel-caption">
-                    <h3>Nomad's Blog</h3>
+                    <h3 appUnderline>Nomad's Blog</h3>
                     <p>Share your experience with us!</p>
                 </div>
             </div>
@@ -29,7 +29,7 @@
             <div class="item">
                 <img src="../../../assets/imageTwo.jpeg">
                 <div class="carousel-caption">
-                    <h3>Never be botherd</h3>
+                    <h3 appUnderline>Never be botherd</h3>
                     <p>Have some free time? Look for information for your upcoming trip.</p>
                 </div>
             </div>
@@ -37,7 +37,7 @@
             <div class="item">
                 <img src="../../../assets/imageThree.jpg">
                 <div class="carousel-caption">
-                    <h3>Interested?</h3>
+                    <h3 appUnderline>Interested?</h3>
                     <p>Give us a shot!</p>
                 </div>
             </div>
@@ -54,7 +54,7 @@
     </div>
 
     <div class="col-lg-3 col-md-3 col-sm-9 col-xs-9">
-        <h1 appUnderline>All Posts By {{ user.username }}</h1>
+        <h1>All Posts By {{ user.username }}</h1>
         <hr> Simple post content example.
         <div id="my-post" class="container" *ngFor="let post of posts">
             <div class="well">
