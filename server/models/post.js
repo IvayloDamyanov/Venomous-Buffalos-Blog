@@ -24,10 +24,10 @@ const PostSchema = mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    dateEdited: {
-        type: Date
-        // default: Date.now()
-    },
+    // dateEdited: {
+    //     type: Date
+    //     // default: Date.now()
+    // },
     // likes: { type: Number, default: 0 },
     // likedBy: { type: Array },
     // dislikes: { type: Number, default: 0 },
@@ -44,9 +44,9 @@ const PostSchema = mongoose.Schema({
 
 const Post = module.exports = mongoose.model('Post', PostSchema);
 
-module.exports.addPost = function(newPost, callback) {
-    newPost.save(callback);
-}
+// module.exports.addPost = function(newPost, callback) {
+//     newPost.save(callback);
+// }
 
 module.exports.getPostsByOwnerUsername = function(query, callback) {
     var regex = new RegExp('^.*' + query + '.*$');

@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'singlePost', component: SinglePostComponent },
-  { path: 'create', component: CreatePostComponent },
+  { path: 'newpost', component: CreatePostComponent },
 ];
 
 @NgModule({

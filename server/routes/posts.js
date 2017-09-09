@@ -9,8 +9,8 @@ const User = require('../models/user');
 const Post = require('../models/post');
 
 // CreatePost 
-router.post('/newpost', (req, res, next) => {
-    let newPost = new Post({
+router.post('/newpost', (req, res) => {
+    /*let newPost = new Post({
         ownerUsername: "gosho",
         name: "New post",
         text: "lorem ipsum dyra byra"
@@ -21,14 +21,46 @@ router.post('/newpost', (req, res, next) => {
         // dateCreated: req.body.dateCreated,
         // dateEdited: req.body.dateEdited
     });
+    */
 
+<<<<<<< HEAD
     Post.addPost(newPost, (err, post) => {
+=======
+    if (!req.body.name) {
+        res.json({ success: false, message: 'Post title is required.' });
+    }
+    if (!req.body.text) {
+        res.json({ success: false, message: 'Post content is required.' });
+    }
+    if (!req.body.ownerName) {
+        res.json({ success: false, message: 'Post creator is required.' });
+    }
+
+    const post = new Post({
+        ownerName: req.body.ownerName,
+        name: req.body.name,
+        img: req.body.img,
+        text: req.body.text,
+        // dateCreated: dateCreated
+    });
+
+    post.save((err) => {
+>>>>>>> 3b28e7a8facd737d5d84cafc30f1bfb98558ac6b
         if (err) {
             res.json({ success: false, msg: 'Failed to add post' });
-        } else {
-            res.json({ success: true, msg: 'Post added' });
         }
+
+        res.json({ success: true, msg: 'Post added' });
     });
+
+    // Post.addPost(newPost, (err, post) => {
+    //     console.log("adding post");
+    //     if (err) {
+    //         res.json({ success: false, msg: 'Failed to add post' });
+    //     } else {
+    //         res.json({ success: true, msg: 'Post added' });
+    //     }
+    // });
 });
 
 module.exports = router;
