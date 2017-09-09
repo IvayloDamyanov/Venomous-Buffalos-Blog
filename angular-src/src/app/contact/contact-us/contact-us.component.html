@@ -1,3 +1,25 @@
-<p>
-  contact-us works!
-</p>
+<form (submit)="onSubmit()" #contactUsForm="ngForm" novalidate>
+    <div class="container">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [(ngModel)]="email" required minlength="3" #emailInput="ngModel" [ngStyle]="{'outline-color':emailInput.dirty&&emailInput.valid?'green':undefined}">
+            <div class="alert alert-danger" *ngIf="(contactUsForm.submitted ||emailInput.touched) && emailInput.errors">
+                <div [hidden]="!emailInput.errors.required">Email is required</div>
+                <div [hidden]="!emailInput.errors.minlength">Name must be at least 3-character-long!</div>
+            </div>
+        </div>
+
+        <div>
+            <label for="question">Comment:</label>
+            <textarea name="question" id="question" class="form-control" rows="5" placeholder="Enter your comment" [(ngModel)]="question" required minlength="3" #questionInput="ngModel" [ngStyle]="{'outline-color':questionInput.dirty&&questionInput.valid?'green':undefined}"></textarea>
+            <div class="alert alert-danger" *ngIf="(contactUsForm.submitted ||questionInput.touched) && questionInput.errors">
+                <div [hidden]="!questionInput.errors.required">Comment is required!</div>
+                <div [hidden]="!questionInput.errors.minlength">Comment must be at least 3-character-long!</div>
+            </div>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+
+    </div>
+</form>

@@ -6,32 +6,47 @@ const config = require('../config/database');
 
 const PostSchema = mongoose.Schema({
     ownerUsername: {
-        type: String,
-        required: true
+        type: String
     },
     name: {
         type: String,
         required: true
     },
     img: {
-        type: Buffer //if it fails will use string for url
+        type: String
+        // Buffer //if it fails will use string for url
     },
     text: {
-        type: String
+        type: String,
+        required: true
     },
     dateCreated: {
-        type: Date
+        type: Date,
+        default: Date.now()
     },
-    dateEdited: {
-        type: String
-    }
+    // dateEdited: {
+    //     type: Date
+    //     // default: Date.now()
+    // },
+    // likes: { type: Number, default: 0 },
+    // likedBy: { type: Array },
+    // dislikes: { type: Number, default: 0 },
+    // dislikedBy: { type: Array },
+    // comments: [{
+    //   content: { type: String, validate: commentValidators },
+    //   commentator: { type: String },
+    //   createdAt: {
+    //     type: Date,
+    //     default: Date.now()
+    //   }
+    // }]
 });
 
 const Post = module.exports = mongoose.model('Post', PostSchema);
 
-module.exports.addPost = function(newPost, callback) {
-    newPost.save(callback);
-}
+// module.exports.addPost = function(newPost, callback) {
+//     newPost.save(callback);
+// }
 
 module.exports.getPostsByOwnerUsername = function(query, callback) {
     var regex = new RegExp('^.*' + query + '.*$');

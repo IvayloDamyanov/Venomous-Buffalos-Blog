@@ -3,6 +3,6 @@ export interface IPost {
   name: string;
   img: string;
   text: string;
-  dateCreated: Date;
-  dateEdited: Date;
+  // dateCreated: Date;
+  // dateEdited: Date;
 }
