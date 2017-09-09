@@ -23,7 +23,6 @@ router.post('/newpost', (req, res, next) => {
     });
 
     Post.addPost(newPost, (err, post) => {
-        console.log("adding post");
         if (err) {
             res.json({ success: false, msg: 'Failed to add post' });
         } else {
