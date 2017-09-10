@@ -9,7 +9,9 @@
             </div>
             <div class="form-group">
                 <label for="img">Post Image URL:</label>
-                <input [(ngModel)]="img" name="img" id="post-img" type="text" class="form-control" placeholder="Image URL of your post" />
+
+                <input [(ngModel)]="img" name="img" id="post-img" type="text" class="form-control" placeholder="Image URL of your post" #hasInput />
+                <span><img *ngIf="hasInput.value.length>0" [src]="img" height="100" width="100" onerror="this.src='../../../assets/img-not-found.gif';" ></span>
             </div>
             <div class="form-group">
                 <label for="text">Text:</label>

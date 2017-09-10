@@ -11,7 +11,7 @@
                             <hr>
                             <input [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" type="button" class="btn btn-primary" [routerLink]="['/edit']" value="Edit Profile Information">
                             <hr>
-                            <h1>{{ user.username }}</h1>
+                            <h1>{{ user?.username }}</h1>
                             <hr>
                             <h4><strong>What kind of traveller are you?</strong></h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel gravida metus, non ultrices sapien. Morbi odio metus, dapibus non nibh id amet.</p>
@@ -29,7 +29,7 @@
                 <input [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" type="button" id="post-button" class="btn" [routerLink]="['/newpost']" value="Create a Post">
             </div>
             <hr>
-            <h1>All Posts By {{ user.username }}</h1>
+            <h1>All Posts By {{ user?.username }}</h1>
             <hr> Simple post content example.
             <div id="my-post" class="container" *ngFor="let post of posts">
                 <div class="well">
@@ -38,9 +38,9 @@
                             <img class="media-object" src={{post.pic}} height="150" width="150">
                         </a>
                         <div class="media-body">
-                            <h4 class="media-heading">{{post.title}}</h4>
-                            <p class="text-right">By {{post.user}}</p>
-                            <p>{{post.text}}</p>
+                            <h4 class="media-heading">{{post?.title}}</h4>
+                            <p class="text-right">By {{post?.user}}</p>
+                            <p>{{post?.text}}</p>
                             <ul class="list-inline list-unstyled">
                                 <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
                                 <li>|</li>

@@ -23,6 +23,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { TrimPipe } from './pipes/trim.pipe';
 
+
 import { SearchModule } from './search/search.module';
 
 

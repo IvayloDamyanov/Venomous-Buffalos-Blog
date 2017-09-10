@@ -22,11 +22,14 @@ const UserSchema = mongoose.Schema({
     },
     description: {
         type: String
+    },
+    location: {
+        type: String
     }
 });
 
 const User = module.exports = mongoose.model('User', UserSchema);
-
+module.exports = User;
 module.exports.getUserById = function(id, callback) {
     User.findById(id, callback);
 }
@@ -56,3 +59,25 @@ module.exports.comparePassword = function(candidatePassword, hash, callback) {
         callback(null, isMatch);
     });
 }
+
+module.exports.editUser = function(userName, newData, callback) {
+    const query = { userName: this.userName }
+    const update = {
+        $set: {
+            name: newData.name,
+            email: newData.email,
+            description: newData.description,
+            location: newData.location
+        }
+    }
+    return User.findByIdAndUpdate(query, update)
+}
+
+//    User.update({username: userName}, {
+//     name: newData.name, 
+//     email: newData.email, 
+//     description: newData.description,
+//     location: newData.location
+// }, function(err, numberAffected, rawResponse) {
+//    //handle it
+// })
