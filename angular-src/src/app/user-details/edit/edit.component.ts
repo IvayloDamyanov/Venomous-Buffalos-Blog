@@ -52,15 +52,15 @@ location: String;
     //   console.log(data);
     // })
 
-    // this.authService.editUser(this.username).subscribe( data => {
-    //   if(data.success) {
-    //   this.flashMessage.show('You Filled in your profile successfully!', {classes: ['alert' ,'alert-success'], timeout: 3000});
-    //   this.router.navigate(['/profile'])
-    // } else {
-    //   this.flashMessage.show('An error has occured. PLease try again!', {classes: ['alert' ,'alert-danger'], timeout: 3000});
-    //   this.router.navigate(['/edit'])
-    // }
-    // })
+    this.authService.editUser(this.username).subscribe( data => {
+      if(data.success) {
+      this.flashMessage.show('You Filled in your profile successfully!', {classes: ['alert' ,'alert-success'], timeout: 3000});
+      this.router.navigate(['/profile'])
+    } else {
+      this.flashMessage.show('An error has occured. PLease try again!', {classes: ['alert' ,'alert-danger'], timeout: 3000});
+      this.router.navigate(['/edit'])
+    }
+    })
 
   }
 
