@@ -5,3 +5,7 @@
 .notFound {
     border: 3px solid red
 }
+
+form {
+    padding-bottom: 120px;
+}

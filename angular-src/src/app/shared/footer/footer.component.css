@@ -3,7 +3,7 @@
 footer {
     background-color: #1F4547;
     font-family: 'Open Sans', sans-serif;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     max-height: 110px;

@@ -42,11 +42,11 @@ export class CreatePostComponent implements OnInit {
 
     this.postsService.createPost(post).subscribe(post => {
       if(post) {
-        this.flashMessage.show('You have registered successfully', {classes: ['alert' ,'alert-success'], timeout: 3000});
+        this.flashMessage.show('You created new post successfully', {classes: ['alert' ,'alert-success'], timeout: 3000});
         console.log('created' + post);
         this.router.navigate(['/home']);
       } else {
-        this.flashMessage.show('The registration was not successful', {classes: ['alert' ,'alert-danger'], timeout: 3000});
+        this.flashMessage.show('The creation was not successful', {classes: ['alert' ,'alert-danger'], timeout: 3000});
         this.router.navigate(['/register']);
       }
     });
