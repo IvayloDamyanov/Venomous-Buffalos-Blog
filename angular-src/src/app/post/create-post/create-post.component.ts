@@ -13,7 +13,7 @@ import { FlashMessagesService } from 'ngx-flash-messages';
   styleUrls: ['./create-post.component.css']
 })
 export class CreatePostComponent implements OnInit {
-  username;
+  ownerName: String;
   name: String;
   img: String;
   text: String;
@@ -27,7 +27,7 @@ export class CreatePostComponent implements OnInit {
 
   ngOnInit() {
     this.authService.getProfile().subscribe(profile => {
-      this.username = profile.user.username;
+      this.ownerName = profile.user.username;
     });
   }
 
@@ -36,7 +36,7 @@ export class CreatePostComponent implements OnInit {
       name: this.name,
       img: this.img,
       text: this.text,
-      ownerName: this.username,
+      ownerName: this.ownerName,
       // dateCreated: this.dateCreated
     }
 
