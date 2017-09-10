@@ -7,7 +7,7 @@ Team project for Angular 4 course - Telerik Academy season 8
 | :------------:|:-------------:|:-----------------------------------:|
 | Milena        | MilenaSh      | https://github.com/MilenaSh         |
 | Ivaylo        |               | https://github.com/IvayloDamyanov   |
-| Tanya         |               | https://github.com/TanyaRan         |
+| Tanya         |  TanyaRan     | https://github.com/TanyaRan         |
 | Todor         |               | https://github.com/fasttakerbg      |
 
 ## Getting Started
