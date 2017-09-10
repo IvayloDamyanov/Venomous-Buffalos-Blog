@@ -1,6 +1,5 @@
 <main>
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
         <div class="form-group">
             <form (submit)="onSearchSubmit([ownerUsernameQuery.value, postTitleQuery.value, textQuery.value])" id="ajax-login-form">
                 <!-- <div class="container-4"> -->
@@ -55,21 +54,38 @@
         </a>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-9 col-xs-9">
-        <!-- <h1>All Posts By {{ user.username }}</h1> -->
-        <hr> Simple post content example.
-        <div id="my-post" class="container" *ngFor="let post of posts">
+    <!-- <div class = "background">
+      <div class="post-container" *ngFor="let result of resultsArray">
+          <div class = "image-container">
+              <img class = "image" src="" alt=""> -->
+              <!--{{this.imgParser(result.img)}} -->
+          <!-- </div>
+          <h3 class="post-name field">{{result.name | uppercase}}</h3>
+          <div class = "name-date field">
+              <h5 class="sngl-field" id="post-owner-name">{{result.ownerUsername}}, </h5>
+              <h5 class="sngl-field">{{result.dateCreated | date: 'yyyy MMM d'}}</h5>
+          </div>
+          <p class="text field" id="post-text">{{result.text}}</p>
+          <h6 class="post-date field">Last editted {{result.dateEditted}} days ago</h6>
+      </div>
+  </div> -->
+
+    <!--<div class="col-lg-3 col-md-3 col-sm-9 col-xs-9">
+         <h1>All Posts By {{ user.username }}</h1> -->
+        <hr>
+      <div class="wraper">
+        <div id="my-post" class="col-sm-offset-1 col-sm-10" *ngFor="let post of resultsArray">
             <div class="well">
                 <div class="media">
                     <a class="pull-left">
-                        <img id="post-image" class="media-object" src={{post.pic}}>
+                        <img id="post-image" class="media-object" [src]="post.img">
                     </a>
                     <div class="media-body">
-                        <h4 class="media-heading">{{post.title}}</h4>
-                        <p class="text-right">By {{post.user}}</p>
-                        <p>{{post.text}}</p>
+                        <h4 class="media-heading">{{post.name | trim}}</h4>
+                        <p class="text-right">By {{post.ownerUsername}}</p>
+                        <div>{{post.text}}</div>
                         <ul class="list-inline list-unstyled">
-                            <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+                            <li><span><i class="glyphicon glyphicon-calendar"></i>{{post.dateCreated | date:'shortDate'}}</span></li>
                             <li>|</li>
                             <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
                             <li>|</li>
@@ -92,7 +108,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 
 
     <!-- <li id="search-input">
@@ -100,5 +116,5 @@
             <a [routerLink]="['/search']" [queryParams]="{keyword: [query.value]}">Search</a>
         </li> -->
 
-
+      </div>
 </main>
