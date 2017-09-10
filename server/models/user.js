@@ -60,18 +60,18 @@ module.exports.comparePassword = function(candidatePassword, hash, callback) {
     });
 }
 
-module.exports.editUser = function(userName, newData, callback) {
-    const query = { userName: this.userName }
-    const update = {
-        $set: {
-            name: newData.name,
-            email: newData.email,
-            description: newData.description,
-            location: newData.location
-        }
-    }
-    return User.findByIdAndUpdate(query, update)
-}
+// module.exports.editUser = function(userName, newData, callback) {
+//     const query = { userName: this.userName }
+//     const update = {
+//         $set: {
+//             name: newData.name,
+//             email: newData.email,
+//             description: newData.description,
+//             location: newData.location
+//         }
+//     }
+//     return User.findByIdAndUpdate(query, update)
+// }
 
 //    User.update({username: userName}, {
 //     name: newData.name, 
