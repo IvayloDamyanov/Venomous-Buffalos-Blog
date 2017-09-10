@@ -48,10 +48,16 @@ const Post = module.exports = mongoose.model('Post', PostSchema);
 //     newPost.save(callback);
 // }
 
-module.exports.getPostsByOwnerUsername = function(query, callback) {
-    var regex = new RegExp('^.*' + query + '.*$');
-    
-    Post.find({ownerUsername: regex}, callback);
+module.exports.searchPosts = function(query, callback) {
+    const userQuery = query['0'];
+    const titleQuery = query['1'];
+    const textQuery = query['2'];
+
+    const userRegex = new RegExp('^.*' + userQuery + '.*$');
+    const titleRegex = new RegExp('^.*' + titleQuery + '.*$');
+    const textRegex = new RegExp('^.*' + textQuery + '.*$');
+
+    Post.find({ownerUsername: userRegex, name: titleRegex, text: textRegex}, callback);
     // return Post.find({name: regex})
     //     .exec(function (err, post) {
     //         if (err){

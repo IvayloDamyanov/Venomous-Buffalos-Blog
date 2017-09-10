@@ -6,9 +6,10 @@ main {
     position: relative;
 }
 
-#my-search {
+.my-search-field {
+    display: inline-block;
     overflow: hidden;
-    width: 400px;
+    width: 200px;
     height: 2em;
     border-radius: 5px;
     vertical-align: middle;
