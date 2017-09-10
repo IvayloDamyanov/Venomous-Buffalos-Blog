@@ -29,7 +29,7 @@ const UserSchema = mongoose.Schema({
 });
 
 const User = module.exports = mongoose.model('User', UserSchema);
-
+module.exports = User;
 module.exports.getUserById = function(id, callback) {
     User.findById(id, callback);
 }
@@ -61,20 +61,16 @@ module.exports.comparePassword = function(candidatePassword, hash, callback) {
 }
 
 module.exports.editUser = function(userName, newData, callback) {
-    // const query = { userName: this.userName }
-    User.findOne({ username: userName }, function(err, user) {
-        name: newData.name;
-        email: newData.email;
-        description: newData.description;
-        location: newData.location;
-
-        user.save(function(err) {
-            if (err) {
-                console.error('ERROR!');
-            }
-        });
-    });
-
+    const query = { userName: this.userName }
+    const update = {
+        $set: {
+            name: newData.name,
+            email: newData.email,
+            description: newData.description,
+            location: newData.location
+        }
+    }
+    return User.findByIdAndUpdate(query, update)
 }
 
 //    User.update({username: userName}, {

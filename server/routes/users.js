@@ -66,14 +66,10 @@ router.post('/edit', (req, res, next) => {
     const username = req.body.username;
     const newUserData = req.body.newUserObject;
 
-
-    User.editUser(username, newUserData, (err, user) => {
-        if (err) {
-            res.json({ success: false, msg: 'Failed to edit user' });
-        } else {
-            return res.json({ success: false, msg: 'User not found' });
-        }
-    });
+    User.editUser(username, newUserData)
+        .then(() => {
+            console.log('Edited successfully');
+        })
 });
 
 
