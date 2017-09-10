@@ -34,11 +34,11 @@ export class LoginComponent implements OnInit {
         this.flashMessage.show( 'You are now logged in', 
         {classes: ['alert', 'alert-success'], timeout: 3000});
         window.localStorage.setItem( 'username', user.username);
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['profile']);
       } else {
         this.flashMessage.show(data.msg,
           {classes: ['alert' ,'alert-danger'], timeout: 3000});
-        this.router.navigate(['login']);
+        this.router.navigate(['profile']);
       }
     });
 
