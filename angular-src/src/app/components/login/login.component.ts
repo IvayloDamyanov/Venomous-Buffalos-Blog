@@ -9,8 +9,8 @@ import { FlashMessagesService } from 'ngx-flash-messages';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username: String;
-  password: String;
+  username: string;
+  password: string;
 
   constructor(
     private authService: AuthService,
@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
         this.authService.storeUserData(data.token, data.user);
         this.flashMessage.show( 'You are now logged in', 
         {classes: ['alert', 'alert-success'], timeout: 3000});
+        window.localStorage.setItem( 'username', user.username);
         this.router.navigate(['dashboard']);
       } else {
         this.flashMessage.show(data.msg,

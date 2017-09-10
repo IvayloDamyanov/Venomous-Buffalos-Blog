@@ -18,13 +18,27 @@ export class AuthService {
     .map(res => res.json());
   }
 
-  editUser(user) {
+  editUser(username, newUserObject) {
     let headers = new Headers();
+    this.loadToken(); 
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/edit', user, {headers: headers})
+    const data = {
+      username: username,
+      newUserObject: newUserObject
+    }
+    return this.http.post('http://localhost:3000/users/edit', data, {headers: headers})
     .map(res => res.json());
   }
+
+  // search(query : Object){
+  //   let headers = new Headers();
+  //   this.loadToken(); // we grab the token from local storage
+  //   headers.append('Authorization', this.authToken);
+  //   headers.append('Content-Type', 'application/json');
+  //   return this.http.get('http://localhost:3000/search', {headers: headers, search: query })
+  //     .map(res => res.json());
+  // }
 
   authenticateUser(user) {
     let headers = new Headers();

@@ -39,7 +39,6 @@ location: String;
     // console.log(this.user);
 
     const user = {
-      username: this.username,
       name: this.name,
       email: this.email,
       description: this.description,
@@ -48,11 +47,13 @@ location: String;
 
     console.log(user);
 
+    const currentUsername = window.localStorage.getItem('username');
+
     // this.authService.getProfile().subscribe(data => {
     //   console.log(data);
     // })
 
-    this.authService.editUser(this.username).subscribe( data => {
+    this.authService.editUser(currentUsername, user).subscribe( data => {
       if(data.success) {
       this.flashMessage.show('You Filled in your profile successfully!', {classes: ['alert' ,'alert-success'], timeout: 3000});
       this.router.navigate(['/profile'])

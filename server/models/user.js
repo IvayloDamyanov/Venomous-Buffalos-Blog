@@ -22,6 +22,9 @@ const UserSchema = mongoose.Schema({
     },
     description: {
         type: String
+    },
+    location: {
+        type: String
     }
 });
 
@@ -56,3 +59,29 @@ module.exports.comparePassword = function(candidatePassword, hash, callback) {
         callback(null, isMatch);
     });
 }
+
+module.exports.editUser = function(userName, newData, callback) {
+    // const query = { userName: this.userName }
+    User.findOne({ username: userName }, function(err, user) {
+        name: newData.name;
+        email: newData.email;
+        description: newData.description;
+        location: newData.location;
+
+        user.save(function(err) {
+            if (err) {
+                console.error('ERROR!');
+            }
+        });
+    });
+
+}
+
+//    User.update({username: userName}, {
+//     name: newData.name, 
+//     email: newData.email, 
+//     description: newData.description,
+//     location: newData.location
+// }, function(err, numberAffected, rawResponse) {
+//    //handle it
+// })

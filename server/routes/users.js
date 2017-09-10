@@ -61,64 +61,21 @@ router.post('/authenticate', (req, res, next) => {
 // Edit Profile
 
 router.post('/edit', (req, res, next) => {
-    // const username = req.body.username;
-    let newUserData = {
-        username: req.body.username,
-        name: req.body.name,
-        email: req.body.email,
-        location: req.body.location,
-        description: req.body.description
-    }
-    console.log(newUserData);
+    console.log('test');
+    console.log(req.body);
+    const username = req.body.username;
+    const newUserData = req.body.newUserObject;
 
-    User.getUserByUsername(NewUserData.username, (err, user) => {
-        if (err) throw err;
-        if (!user) {
+
+    User.editUser(username, newUserData, (err, user) => {
+        if (err) {
+            res.json({ success: false, msg: 'Failed to edit user' });
+        } else {
             return res.json({ success: false, msg: 'User not found' });
-            console.log(res.json);
         }
-
-        // User.editUser(newUserData, (err, user) => {
-        //     if (err) {
-        //         res.json({ success: false, msg: 'Failed to edit user' });
-        //     } else {
-        //         res.json({
-        //             success: true,
-        //             token: 'JWT ' + token,
-        //             user: {
-        //                 name: user.name,
-        //                 email: user.email
-        //                 details: user.details,
-
-        //             },
-        //             msg: 'User profile was updated'
-        //         });
-        //     }
-        // })
-
-        // User.comparePassword(password, user.password, (err, isMatch) => {
-        //     if (err) throw err;
-        //     if (isMatch) {
-        //         const token = jwt.sign(user, config.secret, {
-        //             expiresIn: 604800 // 1 week
-        //         });
-
-        //         res.json({
-        //             success: true,
-        //             token: 'JWT ' + token,
-        //             user: {
-        //                 id: user._id,
-        //                 name: user.name,
-        //                 username: user.username,
-        //                 email: user.email
-        //             }
-        //         });
-        //     } else {
-        //         return res.json({ success: false, msg: 'Wrong password' });
-        //     }
-        // });
     });
 });
+
 
 // Profile
 router.get('/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
