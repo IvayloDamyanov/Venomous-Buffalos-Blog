@@ -24,10 +24,10 @@ const PostSchema = mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    // dateEdited: {
-    //     type: Date
-    //     // default: Date.now()
-    // },
+    dateEditted: {
+        type: Date,
+        default: Date.now()
+    }
     // likes: { type: Number, default: 0 },
     // likedBy: { type: Array },
     // dislikes: { type: Number, default: 0 },

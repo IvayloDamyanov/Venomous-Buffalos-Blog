@@ -7,19 +7,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { UnderlineDirective } from './directives/underline.directive';
 
-import { TrimPipe } from './pipes/trim.pipe';
-import { CapitalizePipe } from './pipes/capitalize.pipe';
-
 @NgModule({
   imports: [
     CommonModule,
     SharedRoutingModule
   ],
-  declarations: [CapitalizePipe, TrimPipe, FooterComponent, NavbarComponent, UnauthorizedComponent, UnderlineDirective],
+  declarations: [FooterComponent, NavbarComponent, UnauthorizedComponent, UnderlineDirective],
   exports: [
     CommonModule,
-    CapitalizePipe,
-    TrimPipe,
     NavbarComponent,
     FooterComponent,
     UnauthorizedComponent,

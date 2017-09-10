@@ -1,3 +1,4 @@
+
 import { PostModule } from './post/post.module';
 import { AuthService } from './services/auth.service';
 import { PostsService } from './services/posts.service';
@@ -19,6 +20,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { TrimPipe } from './pipes/trim.pipe';
 
 
 import { SearchModule } from './search/search.module';
@@ -43,6 +46,8 @@ import { SearchModule } from './search/search.module';
     AppComponent,
     HomeComponent,
     DashboardComponent,
+    TrimPipe,
+    CapitalizePipe
   ],
   imports: [
     UserDetailsModule,

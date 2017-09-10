@@ -1,4 +1,4 @@
-import { TextBolderPipe } from './faq/text-bolding.pipe';
+import { TextBolderPipe } from '../pipes/text-bolding.pipe';
 import { FormsModule } from '@angular/forms';
 import { ContactRoutingModule } from './contact-routing.module';
 import { NgModule } from '@angular/core';

@@ -23,6 +23,7 @@ export class PostsService {
 
   createPost(post): Observable<IPost> {
     this.createAuthenticationHeaders();
+    
     return this.http.post(this.domain + 'posts/newpost', post, this.options)
       .map((response: Response) => {
         return response.json();

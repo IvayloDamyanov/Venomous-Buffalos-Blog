@@ -3,12 +3,12 @@
         <div class = "image-container">
             <img class = "image" src="{{this.imgParser(result.img)}}" alt="">
         </div>
-        <h3 class="post-name field">{{result.name}}</h3>
+        <h3 class="post-name field">{{result.name | uppercase}}</h3>
         <div class = "name-date field">
             <h5 class="sngl-field" id="post-owner-name">{{result.ownerUsername}}, </h5>
-            <h5 class="sngl-field">{{this.dateParser(result.dateCreated)}}</h5>
+            <h5 class="sngl-field">{{result.dateCreated | date: 'yyyy MMM d'}}</h5>
         </div>
         <p class="text field" id="post-text">{{result.text}}</p>
-        <h6 class="post-date field">Last Editted: {{this.dateParser(result.dateModified)}}</h6>
+        <h6 class="post-date field">Last editted {{result.dateEditted | timePeriod}} days ago</h6>
     </div>
 </div>

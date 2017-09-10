@@ -60,17 +60,17 @@ router.post('/authenticate', (req, res, next) => {
 
 // Edit Profile
 
-router.post('/edit', (req, res, next) => {
-    console.log('test');
-    console.log(req.body);
-    const username = req.body.username;
-    const newUserData = req.body.newUserObject;
+// router.post('/edit', (req, res, next) => {
+//     console.log('test');
+//     console.log(req.body);
+//     const username = req.body.username;
+//     const newUserData = req.body.newUserObject;
 
-    User.editUser(username, newUserData)
-        .then(() => {
-            console.log('Edited successfully');
-        })
-});
+//     User.editUser(username, newUserData)
+//         .then(() => {
+//             console.log('Edited successfully');
+//         })
+// });
 
 
 // Profile

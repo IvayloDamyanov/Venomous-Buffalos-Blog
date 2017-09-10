@@ -16,8 +16,6 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.resultsArray = JSON.parse(localStorage.getItem('postsSearchResults'));
-    // console.log(this.resultsArray[0]);
-    
   }
 
   dateParser(input: String){
