@@ -1,3 +1,7 @@
 #my-post {
     height: 530px;
 }
+
+.notFound {
+    border: 3px solid red
+}
