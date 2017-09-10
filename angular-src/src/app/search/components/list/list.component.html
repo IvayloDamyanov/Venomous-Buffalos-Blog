@@ -9,6 +9,6 @@
             <h5 class="sngl-field">{{result.dateCreated | date: 'yyyy MMM d'}}</h5>
         </div>
         <p class="text field" id="post-text">{{result.text}}</p>
-        <h6 class="post-date field">Last Editted: {{result.dateEditted}}</h6>
+        <h6 class="post-date field">Last editted {{result.dateEditted | timePeriod}} days ago</h6>
     </div>
 </div>
