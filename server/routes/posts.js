@@ -10,18 +10,6 @@ const Post = require('../models/post');
 
 // CreatePost 
 router.post('/newpost', (req, res) => {
-    /*let newPost = new Post({
-        ownerUsername: "gosho",
-        name: "New post",
-        text: "lorem ipsum dyra byra"
-        // ownerUsername: req.body.ownerUsername,
-        // name: req.body.name,
-        // img: req.body.img,
-        // text: req.body.text,
-        // dateCreated: req.body.dateCreated,
-        // dateEdited: req.body.dateEdited
-    });
-    */
 
     if (!req.body.name) {
         res.json({ success: false, message: 'Post title is required.' });
@@ -34,11 +22,12 @@ router.post('/newpost', (req, res) => {
     }
 
     const post = new Post({
-        ownerName: req.body.ownerName,
+        ownerUsername: req.body.ownerName,
         name: req.body.name,
         img: req.body.img,
         text: req.body.text,
-        // dateCreated: dateCreated
+        dateCreated: Date.now(),
+        dateEditted: Date.now()
     });
 
     post.save((err) => {
