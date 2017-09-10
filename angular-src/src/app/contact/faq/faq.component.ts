@@ -8,17 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqComponent implements OnInit {
   
- faqBits: {id:number,question:string,answer:string}[]=
+ faqBits: {id:number,
+  tag:string,
+  question:string,
+  answer:string}[] =
   [{
     id:0,
+    tag:'Account',
     question: 'How do I sign up?',
     answer: 'To Sign up click on the SignIn link at the top left corner.'
   },
   {id:1,
+    tag:'Account',
     question: 'How do I change my account info?',
     answer: 'Log into your account , go to Profile and update the info.'
   },
   {id:2,
+    tag:'Bulgaria',
     question: 'Which is the best country in Europe',
     answer: `Bulgaria (/bʌlˈɡɛəriə, bʊl-/ (About this sound listen); Bulgarian: България, tr. Bǎlgariya), officially the Republic of Bulgaria (Bulgarian: Република България, tr. Republika Bǎlgariya, pronounced [rɛˈpublikɐ bɐɫˈɡarijɐ]), is a country in southeastern Europe. It is bordered by Romania to the north, Serbia and Macedonia to the west, Greece and Turkey to the south, and the Black Sea to the east. With a territory of 110,994 square kilometres (42,855 sq mi), Bulgaria is Europe's 16th-largest country.
       Organised prehistoric cultures began developing on current Bulgarian 
@@ -28,6 +34,7 @@ export class FaqComponent implements OnInit {
        its territories came under Ottoman rule for nearly five centuries. The Russo-Turkish War of 1877–78 led to the formation of the Third Bulgarian State. The following years saw several conflicts with its neighbours, which prompted Bulgaria to align with Germany in both world wars. In 1946 it became a one-party socialist state as part of the Soviet-led Eastern Bloc. In December 1989 the ruling Communist Party allowed multi-party elections, which subsequently led to Bulgaria's transition into a democracy and a market-based economy.`
   },
   {id:3,
+    tag:'Bulgaria',
     question: 'Whcih is the best time to visit Bulgaria?',
     answer: `Sofia (/ˈsoʊfiə/ or /ˈsɒfiə/ or /soʊˈfiːə/;[12][13] Bulgarian: София, tr. Sofiya,[14][15] 
       pronounced [ˈsɔfiə, ˈsɔfjə] (About this sound listen)) is the capital and largest city of Bulgaria. 
@@ -37,43 +44,38 @@ export class FaqComponent implements OnInit {
       Sofia has been an area of human habitation since at least 7000 BC.[3] Being Bulgaria's primate city, Sofia is a hometown of many of the major local universities, cultural institutions and commercial companies.[18] Sofia is one of the top 10 best places for start-up business in the world, especially in information technologies.[19] Sofia is Europe's most affordable capital to visit as of 2013.[20]`
   },
   {id:4,
-    question: 'How do I sign up?',
+    tag:'Albania',
+    question: 'Live in Albania?',
     answer: 'To Sign up click on the SignIn link at the top left corner.'
   },
   {id:5,
-    question: 'How do I sign up?',
+    tag:'Spain',
+    question: 'Going to Spain?',
     answer: 'To Sign up click on the SignIn link at the top left corner.'
   },
   {id:6,
-    question: 'How do I sign up?',
+    tag:'Germany',
+    question: 'How do I go to Germany?',
     answer: 'To Sign up click on the SignIn link at the top left corner.'
   },
   {id:7,
-    question: 'How do I sign up?',
+    tag:'Romania',
+    question: 'Now in Romania?',
     answer: 'To Sign up click on the SignIn link at the top left corner.'
   },
   {id:8,
-    question: 'How do I sign up?',
+    tag:'Brazil',
+    question: 'Samba in Brasil?',
     answer: 'To Sign up click on the SignIn link at the top left corner.'
   },
   {id:9,
-    question: 'How do I sign up?',
+    tag:'Peru',
+    question: 'Peru in September?',
     answer: 'To Sign up click on the SignIn link at the top left corner.'
   },
   {id:10,
-    question: 'How do I sign up?',
-    answer: 'To Sign up click on the SignIn link at the top left corner.'
-  },
-  {id:11,
-    question: 'How do I sign up?',
-    answer: 'To Sign up click on the SignIn link at the top left corner.'
-  },
-  {id:12,
-    question: 'How do I sign up?',
-    answer: 'To Sign up click on the SignIn link at the top left corner.'
-  },
-  {id:13,
-    question: 'How do I sign up?',
+    tag:'Bolivia',
+    question: 'Bolivian Jungle',
     answer: 'To Sign up click on the SignIn link at the top left corner.'
   }]
   
