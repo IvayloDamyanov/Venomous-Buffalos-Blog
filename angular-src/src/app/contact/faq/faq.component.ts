@@ -1,4 +1,3 @@
-import { TextBolderPipe } from './text-bolding.pipe';
 import { Component, OnInit } from '@angular/core';
 
 
