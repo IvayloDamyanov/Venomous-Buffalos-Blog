@@ -26,7 +26,11 @@ const users = require('./routes/users');
 const posts = require('./routes/posts');
 const searches = require('./routes/searches');
 
+// To use locally
 const port = process.env.PORT || 3000;
+
+// For deploy
+// const port = process.env.PORT || 8080;
 
 // Set static folder where will be the client side
 app.use(express.static(path.join(__dirname, '../public')));

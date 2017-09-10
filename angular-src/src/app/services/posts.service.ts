@@ -25,6 +25,8 @@ export class PostsService {
     this.createAuthenticationHeaders();
     
     return this.http.post(this.domain + 'posts/newpost', post, this.options)
+    // For deploy
+     // return this.http.post('posts/newpost', post, this.options)
       .map((response: Response) => {
         return response.json();
       })

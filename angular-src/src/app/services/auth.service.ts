@@ -15,6 +15,8 @@ export class AuthService {
     headers.append('Content-Type', 'application/json');
     let options = new RequestOptions({ headers: headers });
     return this.http.post('http://localhost:3000/users/register', user, options)
+    // for deploy
+    // return this.http.post('users/register', user, options)
     .map(res => res.json());
   }
 
@@ -28,6 +30,8 @@ export class AuthService {
       newUserObject: newUserObject
     }
     return this.http.post('http://localhost:3000/users/edit', data, {headers: headers})
+    // for deploy
+    // return this.http.post('users/edit', data, {headers: headers})
     .map(res => res.json());
   }
 
@@ -44,6 +48,8 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers})
+    // For deploy
+    // return this.http.post('users/authenticate', user, {headers: headers})
     .map(res => res.json());
   }
 
@@ -53,6 +59,8 @@ export class AuthService {
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
     return this.http.get('http://localhost:3000/users/profile', {headers: headers})
+    // For deploy
+    // return this.http.get('users/profile', {headers: headers})
     .map(res => res.json());
   }
 
