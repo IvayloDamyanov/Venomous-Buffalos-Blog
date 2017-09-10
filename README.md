@@ -3,12 +3,12 @@ Team project for Angular 4 course - Telerik Academy season 8
 
 ## Authors
 
-|     Name      |   Username    |        Gihub                        |
-| :------------:|:-------------:|:-----------------------------------:|
-| Milena        | MilenaSh      | https://github.com/MilenaSh         |
-| Ivaylo        |               | https://github.com/IvayloDamyanov   |
-| Tanya         |  TanyaRan     | https://github.com/TanyaRan         |
-| Todor         |               | https://github.com/fasttakerbg      |
+|     Name      |   Username        |        Gihub                        |
+| :------------:|:-----------------:|:-----------------------------------:|
+| Milena        | Milena_Shishkova  | https://github.com/MilenaSh         |
+| Ivaylo        | Ivaylo_Damyanov   | https://github.com/IvayloDamyanov   |
+| Tanya         | TanyaRan          | https://github.com/TanyaRan         |
+| Todor         | fasttakerbg       | https://github.com/fasttakerbg      |
 
 ## Getting Started
 
@@ -27,8 +27,7 @@ ng serve
 ## Running the tests
 
 ```
-- integration -> 
-- unit -> 
+npm test
 ```
 ## License
 
