@@ -7,9 +7,9 @@ const Post = require('../models/post');
 
 // Search
 router.get('/', (req, res, next) => {
-    const query = req.query['0'];
+    const query = req.query;
     
-    Post.getPostsByOwnerUsername(query, (err, data) => {
+    Post.searchPosts(query, (err, data) => {
         res.json({
             success: true,
             results: data

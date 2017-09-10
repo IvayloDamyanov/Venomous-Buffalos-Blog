@@ -10,7 +10,7 @@ export class FindService {
 
   constructor(private http:Http) { }
 
-  search(query : String){
+  search(query : Object){
     let headers = new Headers();
     this.loadToken(); // we grab the token from local storage
     headers.append('Authorization', this.authToken);
