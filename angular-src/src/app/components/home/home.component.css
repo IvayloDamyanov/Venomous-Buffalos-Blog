@@ -2,6 +2,13 @@ main {
     margin-top: -21px;
 }
 
+.wraper{
+  padding-bottom: 100px;
+}
+
+#my-post{
+  float: none;
+}
 #myCarousel {
     position: relative;
 }
@@ -47,8 +54,4 @@ img {
 
 #post-image {
     width: 50px;
-}
-
-.col-lg-3 {
-    margin-bottom: 100px;
 }
