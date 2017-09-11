@@ -34,3 +34,5 @@ npm test
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Home page view
+
+![alt text](https://github.com/MilenaSh/Venomous-Buffalos-Blog/blob/master/angular-src/src/assets/home.png)
