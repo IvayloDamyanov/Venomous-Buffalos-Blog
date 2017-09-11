@@ -6,10 +6,13 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./faq-view.component.css']
 })
 export class FaqViewComponent implements OnInit {
+  isChecked:boolean=false
 @Input()faqBits:{id:number,tag:string,question:string,answer:string}[]
   constructor() { }
 
   ngOnInit() {
+   
   }
+
 
 }
