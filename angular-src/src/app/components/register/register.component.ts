@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   password: string;
   confirmpassword: string;
 
-  constructor(private validateService : ValidateService, 
+  constructor(private validateService: ValidateService,
               private flashMessage: FlashMessagesService,
               private authService: AuthService,
               private router: Router
@@ -25,15 +25,15 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
 
   }
-  
-  onRegisterSubmit(){
+
+  onRegisterSubmit() {
       const user = {
         name: this.name,
         email: this.email,
         username: this.username,
         password: this.password,
         confirmpassword: this.confirmpassword
-      }
+      };
 
   // Apply the validations
 
@@ -48,16 +48,16 @@ export class RegisterComponent implements OnInit {
   //   return false;
   // }
 
-  // Register user
-  this.authService.registerUser(user).subscribe(data => {
-    if(data.success) {
-      this.flashMessage.show('You have registered successfully', {classes: ['alert' ,'alert-success'], timeout: 3000});
-      this.router.navigate(['/login'])
-    } else {
-      this.flashMessage.show('The registration was not successful', {classes: ['alert' ,'alert-danger'], timeout: 3000});
-      this.router.navigate(['/register'])
-    }
-  })
-    }
+    // Register user
+    this.authService.registerUser(user).subscribe(data => {
+      if (data.success) {
+        this.flashMessage.show('You have registered successfully', {classes: ['alert', 'alert-success'], timeout: 3000});
+        this.router.navigate(['/login']);
+      } else {
+        this.flashMessage.show('The registration was not successful', {classes: ['alert', 'alert-danger'], timeout: 3000});
+        this.router.navigate(['/register']);
+      }
+    });
+  }
 
 }

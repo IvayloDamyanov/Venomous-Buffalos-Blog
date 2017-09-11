@@ -7,7 +7,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 @Injectable()
 export class PostsService {
   options;
-  domain = "http://localhost:3000/";
+  domain = 'http://localhost:3000/';
 
   constructor(private authService: AuthService, private http: Http) { }
 
@@ -23,7 +23,7 @@ export class PostsService {
 
   createPost(post): Observable<IPost> {
     this.createAuthenticationHeaders();
-    
+
     return this.http.post(this.domain + 'posts/newpost', post, this.options)
     // For deploy
      // return this.http.post('posts/newpost', post, this.options)

@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -8,12 +8,15 @@ import {NgForm} from '@angular/forms';
 })
 export class ContactUsComponent implements OnInit {
 email;
+question;
+
   constructor() { }
 
   ngOnInit() {
   }
-  onSubmit(commentForm: NgForm){
-    console.log('success')
+
+  onSubmit(commentForm: NgForm) {
+    console.log('success');
   }
 }
 

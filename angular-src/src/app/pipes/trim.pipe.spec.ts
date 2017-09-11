@@ -5,7 +5,7 @@ import { TrimPipe } from './trim.pipe';
 
 describe('Pipe: Trime', () => {
   it('create an instance', () => {
-    let pipe = new TrimPipe();
+    const pipe = new TrimPipe();
     expect(pipe).toBeTruthy();
   });
 });

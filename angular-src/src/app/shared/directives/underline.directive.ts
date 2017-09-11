@@ -19,9 +19,9 @@ export class UnderlineDirective {
         this.hover(false);
     }
   // Event method to be called on mouse enter and on mouse leave
-    hover(shouldUnderline: boolean){
-        if(shouldUnderline){
-        this.renderer.setElementStyle(this.el.nativeElement, 'text-decoration', 'underline');
+    hover(shouldUnderline: boolean) {
+        if (shouldUnderline) {
+          this.renderer.setElementStyle(this.el.nativeElement, 'text-decoration', 'underline');
         } else {
         this.renderer.setElementStyle(this.el.nativeElement, 'text-decoration', 'none');
         }

@@ -12,14 +12,14 @@ import { Router } from '@angular/router';
 })
 export class EditComponent implements OnInit {
 user: Object;
-username : String;
+username: String;
 name: String;
 email: String;
 description: String;
 location: String;
 
   constructor(private authService: AuthService,
-              private validateService : ValidateService, 
+              private validateService: ValidateService,
               private flashMessage: FlashMessagesService,
               private router: Router) { }
 
@@ -42,8 +42,8 @@ location: String;
       name: this.name,
       email: this.email,
       description: this.description,
-      location: this.location   
-    }
+      location: this.location
+    };
 
     console.log(user);
 
@@ -54,15 +54,13 @@ location: String;
     // })
 
     this.authService.editUser(currentUsername, user).subscribe( data => {
-      if(data.success) {
-      this.flashMessage.show('You Filled in your profile successfully!', {classes: ['alert' ,'alert-success'], timeout: 3000});
-      this.router.navigate(['/profile'])
+      if (data.success) {
+      this.flashMessage.show('You Filled in your profile successfully!', {classes: ['alert', 'alert-success'], timeout: 3000});
+      this.router.navigate(['/profile']);
     } else {
-      this.flashMessage.show('An error has occured. PLease try again!', {classes: ['alert' ,'alert-danger'], timeout: 3000});
-      this.router.navigate(['/edit'])
+      this.flashMessage.show('An error has occured. PLease try again!', {classes: ['alert', 'alert-danger'], timeout: 3000});
+      this.router.navigate(['/edit']);
     }
-    })
-
+    });
   }
-
 }

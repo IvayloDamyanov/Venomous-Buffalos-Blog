@@ -7,20 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SinglePostComponent implements OnInit {
  posts = [{
-   user:'Todor',
-   title:'              Telerik',
-   text:`Hi! I'm New York Times best selling author Nomadic Matt. If you're overwhelmed by all the travel information on the web, sign up here to get proven
+   user: 'Todor',
+   title: '              Telerik',
+   // tslint:disable-next-line:max-line-length
+   text: `Hi! I'm New York Times best selling author Nomadic Matt. If you're overwhelmed by all the travel information on the web, sign up here to get proven
    step by step tips and tricks that will save you time, money, and have you traveling sooner!`,
-  pic:'../../../assets/imageOne.jpeg'
+   pic: '../../../assets/imageOne.jpeg'
  },
  {
-  user:'Anya',
-  title:'Pernik',
-  text:`Hi! I'm New York Times best selling author Nomadic Matt. If you're overwhelmed by all the travel information on the web, sign up here to get proven
+  user: 'Anya',
+  title: 'Pernik',
+  // tslint:disable-next-line:max-line-length
+  text: `Hi! I'm New York Times best selling author Nomadic Matt. If you're overwhelmed by all the travel information on the web, sign up here to get proven
   step by step tips and tricks that will save you time, money, and have you traveling sooner!`,
-  pic:"../../../assets/logo-blog.png"
+  pic: '../../../assets/logo-blog.png'
 
-}]
+}];
   constructor() { }
 
   ngOnInit() {

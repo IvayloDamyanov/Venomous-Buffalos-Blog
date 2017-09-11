@@ -13,10 +13,10 @@ import { FaqViewComponent } from './faq-view/faq-view.component';
 
 @NgModule({
   imports: [
-    CommonModule, ContactRoutingModule,FormsModule
+    CommonModule, ContactRoutingModule, FormsModule
   ],
-  declarations: [ContactUsComponent, AboutUsComponent, FaqComponent,TextBolderPipe,
-    FaqViewComponent,ArraySortPipe
-]
+  declarations: [ContactUsComponent, AboutUsComponent, FaqComponent, TextBolderPipe,
+    FaqViewComponent, ArraySortPipe
+  ]
 })
 export class ContactModule { }

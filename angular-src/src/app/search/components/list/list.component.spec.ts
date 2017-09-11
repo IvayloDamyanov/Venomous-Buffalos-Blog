@@ -5,7 +5,7 @@ import { Router, RouterModule } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { ListComponent } from './list.component';
-import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 fdescribe('ListComponent', () => {
   let component: ListComponent;
@@ -29,20 +29,21 @@ fdescribe('ListComponent', () => {
   });
 
     it('Data parser should return data with length 10.', () => {
-    let input = 'This should be the input of the search.';
-    let output = component.dateParser(input);
+    const input = 'This should be the input of the search.';
+    const output = component.dateParser(input);
     expect(output.length).toEqual(10);
   });
 
     it('Image parser should parse the default image if none is given', () => {
-    let input = '';
-    let output = component.imgParser(input);
+    const input = '';
+    const output = component.imgParser(input);
+    // tslint:disable-next-line:max-line-length
     expect(output).toEqual('https://image.slidesharecdn.com/budgettravellingrevb-150910113232-lva1-app6892/95/budget-travelling-7-638.jpg?cb=1441959126');
   });
 
     it('Image parser should parse the given image', () => {
-    let input = 'some/sample//image/url';
-    let output = component.imgParser(input);
+    const input = 'some/sample//image/url';
+    const output = component.imgParser(input);
     expect(output).toEqual('some/sample//image/url');
   });
 

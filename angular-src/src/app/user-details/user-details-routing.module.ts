@@ -4,7 +4,7 @@ import { EditComponent } from './edit/edit.component';
 import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
-  { path: 'edit', component: EditComponent, canActivate:[AuthGuard]}
+  { path: 'edit', component: EditComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

@@ -8,12 +8,12 @@ export class AuthService {
   authToken: any;
   user: any;
 
-  constructor(private http:Http) { }
+  constructor(private http: Http) { }
 
   registerUser(user) {
-    let headers = new Headers();
+    const headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    let options = new RequestOptions({ headers: headers });
+    const options = new RequestOptions({ headers: headers });
     return this.http.post('http://localhost:3000/users/register', user, options)
     // for deploy
     // return this.http.post('users/register', user, options)
@@ -21,14 +21,15 @@ export class AuthService {
   }
 
   editUser(username, newUserObject) {
-    let headers = new Headers();
-    this.loadToken(); 
+    const headers = new Headers();
+    this.loadToken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
     const data = {
       username: username,
       newUserObject: newUserObject
-    }
+    };
+
     return this.http.post('http://localhost:3000/users/edit', data, {headers: headers})
     // for deploy
     // return this.http.post('users/edit', data, {headers: headers})
@@ -45,7 +46,7 @@ export class AuthService {
   // }
 
   authenticateUser(user) {
-    let headers = new Headers();
+    const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers})
     // For deploy
@@ -54,7 +55,7 @@ export class AuthService {
   }
 
   getProfile() {
-    let headers = new Headers();
+    const headers = new Headers();
     this.loadToken(); // we grab the token from local storage
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
@@ -72,17 +73,17 @@ export class AuthService {
   }
 
   // fetches the token and stores it in local storage
-  loadToken(){
+  loadToken() {
     const token = localStorage.getItem('id_token');
     this.authToken = token;
   }
 
   // check if the token has not expired
-  loggedIn(){
+  loggedIn() {
     return tokenNotExpired('id_token');
   }
 
-  logout(){
+  logout() {
     this.authToken = null;
     this.user = null;
     localStorage.clear();

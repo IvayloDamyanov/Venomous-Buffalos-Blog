@@ -12,10 +12,10 @@ import { TimePeriodPipe } from './shared/time-period.pipe';
   providers: [FindService],
   exports: [ListComponent]
 })
-export class SearchModule { 
+export class SearchModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SearchModule
-    }
+    };
   }
 }

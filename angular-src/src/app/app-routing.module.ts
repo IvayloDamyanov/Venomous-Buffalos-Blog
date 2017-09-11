@@ -18,13 +18,13 @@ import { SearchModule } from './search/search.module';
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
-    { path:'register', component: RegisterComponent },
-    { path:'login', component: LoginComponent },
-    { path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
-    { path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
+    { path: 'register', component: RegisterComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
+    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     // contact module test
-    { path:'contact', loadChildren:'./contact/contact.module#ContactModule'},
-    { path:'posts', loadChildren:'./post/post.module#PostModule'},
+    { path: 'contact', loadChildren: './contact/contact.module#ContactModule'},
+    { path: 'posts', loadChildren: './post/post.module#PostModule'},
     // testing single Post view
     // { path: 'singlePost', component: SinglePostComponent },
     { path: 'user', loadChildren: './user-details/user-details.module#UserDetailsModule'},

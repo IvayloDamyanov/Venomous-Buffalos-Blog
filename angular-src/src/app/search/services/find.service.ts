@@ -8,10 +8,10 @@ export class FindService {
   authToken: any;
   user: any;
 
-  constructor(private http:Http) { }
+  constructor(private http: Http) { }
 
-  search(query : Object){
-    let headers = new Headers();
+  search(query: Object) {
+    const headers = new Headers();
     this.loadToken(); // we grab the token from local storage
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
@@ -19,7 +19,7 @@ export class FindService {
       .map(res => res.json());
   }
 
-  loadToken(){
+  loadToken() {
     const token = localStorage.getItem('id_token');
     this.authToken = token;
   }

@@ -8,19 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  resultsArray : Array<Object>;
+  resultsArray: Array<Object>;
 
   constructor(
-    private router: Router, 
+    private router: Router,
     private findService: FindService) { }
 
   ngOnInit() {
     this.resultsArray = JSON.parse(localStorage.getItem('postsSearchResults'));
   }
 
-  dateParser(input: String){
+  dateParser(input: String) {
     let output: String;
-    if(input && input.length > 10){
+    if (input && input.length > 10) {
       output = input.slice(0, 10);
     } else {
       output = input;
@@ -28,15 +28,14 @@ export class ListComponent implements OnInit {
     return output;
   }
 
-  imgParser(input: String){
+  imgParser(input: String) {
     let output: String;
-    if (input){
+    if (input) {
       output = input;
     } else {
-      output = "https://image.slidesharecdn.com/budgettravellingrevb-150910113232-lva1-app6892/95/budget-travelling-7-638.jpg?cb=1441959126";
+      // tslint:disable-next-line:max-line-length
+      output = 'https://image.slidesharecdn.com/budgettravellingrevb-150910113232-lva1-app6892/95/budget-travelling-7-638.jpg?cb=1441959126';
     }
     return output;
   }
-  
-
 }

@@ -38,16 +38,17 @@ export class CreatePostComponent implements OnInit {
       text: this.text,
       ownerName: this.ownerName,
       // dateCreated: this.dateCreated
-    }
+    };
 
+    // tslint:disable-next-line:no-shadowed-variable
     this.postsService.createPost(post).subscribe(post => {
-      if(post) {
+      if (post) {
 
-        this.flashMessage.show('You created new post successfully', {classes: ['alert' ,'alert-success'], timeout: 3000});
+        this.flashMessage.show('You created new post successfully', {classes: ['alert', 'alert-success'], timeout: 3000});
         console.log('created' + post);
         this.router.navigate(['/home']);
       } else {
-        this.flashMessage.show('The creation was not successful', {classes: ['alert' ,'alert-danger'], timeout: 3000});
+        this.flashMessage.show('The creation was not successful', {classes: ['alert', 'alert-danger'], timeout: 3000});
         this.router.navigate(['/register']);
       }
     });
