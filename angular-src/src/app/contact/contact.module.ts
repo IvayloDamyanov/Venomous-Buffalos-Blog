@@ -1,3 +1,4 @@
+import { ArraySortPipe } from '../pipes/sort-by-name.pipe';
 import { TextBolderPipe } from '../pipes/text-bolding.pipe';
 import { FormsModule } from '@angular/forms';
 import { ContactRoutingModule } from './contact-routing.module';
@@ -15,7 +16,7 @@ import { FaqViewComponent } from './faq-view/faq-view.component';
     CommonModule, ContactRoutingModule,FormsModule
   ],
   declarations: [ContactUsComponent, AboutUsComponent, FaqComponent,TextBolderPipe,
-    FaqViewComponent
+    FaqViewComponent,ArraySortPipe
 ]
 })
 export class ContactModule { }
